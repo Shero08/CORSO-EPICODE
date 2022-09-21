@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streaming music app</title>
+
+    <style>
+        body{ 
+            width: 100%;
+            height: 100%;
+            background-color:#efefef;
+            position: relative;
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url(assets/music.jpg);
+            background-size: cover;
+            margin: 0;
+        }
+
+        #container{
+            max-width: 550px;
+            background-color: white;
+            border-radius: 20px;
+            height: auto;
+            padding: 30px 2%;
+            margin: 60px auto 0;
+            opacity: 0.9;
+            box-shadow: rgba(0,0,0,0.4) 0px 2px 6px;
+        }
+
+        #dati input{
+            margin: 10px 0;
+            width: 100%;
+        }
+
+        #dati2 input{
+            margin: 10px 1%;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <h1>Registrati all'App:</h1>
+        
+        <form onsubmit="alert('Registrazione Inviata!')">
+            <div id="dati">
+                <div>
+                    <input type="text" placeholder="Inserisci il tuo nome">
+                </div>
+                <div>
+                    <input type="text" placeholder="Inserisci il tuo cognome">
+                </div>
+                <div>
+                    <input type="mail" placeholder="Inserisci la tua email">
+                </div>
+                <div>
+                    <input type="password" placeholder="Inserisci una password">
+                </div>
+                <div>
+                    <input type="date" placeholder="Inserisci la tua data di nascita">
+                </div>
+                <div>
+                    <input type="number" placeholder="Inserisci il tuo numero di telefono">
+                </div>
+            </div>
+            <div id="dati2">
+                <div>
+                    <h2>Seleziona i generi che ti piacerebbe ascoltare:</h2>
+                    <input type="checkbox">
+                    <label for="Classica">Classica</label>
+                    <input type="checkbox">
+                    <label for="Rock">Rock</label>
+                    <input type="checkbox">
+                    <label for="Pop">Pop</label>
+                    <input type="checkbox">
+                    <label for="Blues">Blues</label>
+                    <input type="checkbox">
+                    <label for="Elettronica">Elettronica</label>
+                    <input type="checkbox">
+                    <label for="Metal">Metal</label>
+                </div>
+                <div>
+                    <input type="radio" id="accetto"><label for="accetto">Accetto i termini e le condizioni</label>
+                </div>
+            </div>
+            <button style="margin-top: 10px;"type="submit">Invia Registrazione</button>
+        </form>
+    </div>
+</body>
+</html>
