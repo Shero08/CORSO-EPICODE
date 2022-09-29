@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlo Capuozzo</title>
+
+    <style>@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');</style> 
+
+    <style>
+        body{
+            margin: 0;
+            padding:60px 0 0 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Lato', sans-serif;
+            position: relative;
+        }
+
+        #container{ 
+            max-width: 55%; 
+            margin: 0 auto; 
+        }
+
+        #container #dati-profilo{
+            display: flex;
+        }
+
+        #container #dati-profilo .profile{
+            margin:0 8% 0 0;
+        }
+
+        #container #dati-profilo .profile a img{
+            width: 200px; 
+            border-radius: 10%;
+        }
+
+        #container #dati-profilo .profile a img:hover{
+            border-radius: 20%;
+            transition: ease-in-out all 300ms;
+            -webkit-transition: ease-in-out all 300ms;
+            -moz-transition: ease-in-out all 300ms;
+            -ms-transition: ease-in-out all 300ms;
+        }
+
+        #container #dati-profilo .dati h1{
+            text-transform: uppercase;
+            font-weight: 800;
+            margin: 0 0 20px 0;
+        }
+
+        #container #dati-profilo .dati h2{
+            font-weight: 600;
+            margin: 0 0 20px 0;
+        }
+
+        #container #dati-profilo .dati h2 a{
+            font-weight: 800;
+            text-decoration: none;
+            color: #1461d9;
+        }
+
+        #container #dati-profilo .dati a:hover{
+            text-decoration: underline;
+            transition: ease-in-out all 300ms;
+            -webkit-transition: ease-in-out all 300ms;
+            -moz-transition: ease-in-out all 300ms;
+            -ms-transition: ease-in-out all 300ms;
+        }
+
+        #container #dati-profilo .dati a.btn{
+            font-weight: 600;
+            text-decoration: none;
+            background: #1461d9;
+            color: #fff;
+            padding: 20px 4%;
+            text-align: center;
+            display: block;
+            width: 50%;
+            font-size: 1rem;
+            border-radius: 20px;
+        }
+
+        #container #dati-profilo .dati a.btn:hover{
+            background: #1417d9;
+        }
+
+        footer{
+            background: #000;
+            padding: 20px 2%;
+            text-align: center;
+            color:white;
+            display: flex;
+        }
+
+        footer .footer-copy,
+        footer .footer-social{
+            height: 30px;
+            line-height: 30px;
+            margin: 0 2% 0 0;
+        }
+
+        footer .footer-social{
+            width: 10%;
+        }
+
+        footer .footer-social a{
+            display: inline-block;
+            color:white;
+            margin: 0 4%;
+        }
+
+        footer .footer-social a ion-icon{
+            height: 30px;
+            line-height: 30px;
+            display: block;
+        }
+
+        footer .footer-social a ion-icon:hover{
+            font-size: 20px;
+            transition: ease-in-out all 300ms;
+            -webkit-transition: ease-in-out all 300ms;
+            -moz-transition: ease-in-out all 300ms;
+            -ms-transition: ease-in-out all 300ms;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+
+        <div id="dati-profilo">
+            <div class="profile">
+                <a href="#"><img alt="Foto profilo" src="img-me.jpg"></a>
+            </div>
+            <div class="dati">
+                <h1>Carlo Capuozzo</h1>
+                <h2>E-mail: <a href="mailto:carlocap08@gmail.com">carlocap08@gmail.com</a></h4>
+                <h2>Telefono: <a href="tel:3475228185">(+39) 3475228185</a></h4>
+                <a class="btn" href="#footer">Scorri al fondo <ion-icon name="arrow-down-outline"></ion-icon></a>
+                
+            </div>
+        </div>
+        <hr>
+
+        <main>
+            <div id="presentazione">
+                <h2>Presentazione:</h2>
+                <p>Mi chiamo Carlo Capuozzo e sono un Web & Graphic Designer e Tecnico Informatico con esperienza nel campo affiancata ad una forte
+                    passione per la materia, ho lavorato anche nell'ambito dell'amministrazione aziendale. Sono iscritto al corso di Epicode per rafforzare, 
+                    ampliare le mie competenze e diventare uno sviluppatore font-end.</p>
+            </div>
+            <hr>
+            
+            <div id="job-exp">
+                <h2>Esperienze lavorative:</h2>
+                <table style="text-align: left; width: 100%;">
+                    <tr>
+                        <th>Qualifica:</th>
+                        <th>Azienda:</th>
+                        <th>Città:</th>
+                        <th>Paese:</th>
+                        <th>Periodo:</th>
+                    </tr>
+                    <tr>
+                        <td><b>Web e Graphic Designer</b></td>
+                        <td>Futurecap s.r.l.s.</td>
+                        <td>Casalnuovo di Napoli</td>
+                        <td>Italia</td>
+                        <td>09/2019 – Attuale</td>
+                    </tr>
+                    <tr>
+                        <td><b>Tecnico Informatico e Web Designer</b></td>
+                        <td>Sixtech s.r.l.s.</td>
+                        <td>Roma</td>
+                        <td>Italia</td>
+                        <td>09/2016 – 05/2019</td>
+                    </tr>
+                    <tr>
+                        <td><b>Tecnico Informatico e Web Designer</b></td>
+                        <td>Sares s.r.l.</td>
+                        <td>Napoli</td>
+                        <td>Italia</td>
+                        <td>01/2012 – 06/2016</td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+
+            <div id="study">
+                <h2>Istruzione e formazione:</h2>
+                <table style="text-align: left; width: 100%;">
+                    <tr>
+                        <th>Titolo:</th>
+                        <th>Istituto:</th>
+                        <th>Voto:</th>
+                        <th>Città:</th>
+                        <th>Periodo:</th>
+                    </tr>
+                    <tr>
+                        <td><b>Attestato di Web e Graphic Design</b></td>
+                        <td>Ilas s.r.l.</td>
+                        <td>110/110</td>
+                        <td>Napoli</td>
+                        <td>2012 – 2013</td>
+                    </tr>
+                    <tr>
+                        <td><b>Diploma di Istruzione Superiore</b></td>
+                        <td>Liceo Artistico Statale di Napoli</td>
+                        <td>89/100</td>
+                        <td>Napoli</td>
+                        <td>10/09/2006 – 31/07/2011</td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+
+            <div id="hobbies">
+                <h2>Hobbies ed interessi:</h2>
+                <ul>
+                    <li>Fin da piccolo ho sempre amato l'arte e nello specifico il disegno;</li>
+                    <li>Amo viaggiare e scoprire il mondo;</li>
+                    <li>Sono anche un appassionato di tecnologia, ed è per questo che ho abbinato le mie principali passioni (pc e arte) nel font-end e la grafica;</li>
+                    <li>Infine ho tante altri interessi, che spaziano dalla cucina alla filmografia ai fumetti e manga, libri ed altro ancora.</li>
+                </ul>
+            </div>
+
+        </main>
+        
+        <footer id="footer">
+            <div class="footer-copy">© Copyright Carlo Capuozzo</div>
+            <div class="footer-social">
+                <a target="_blank" href="https://www.instagram.com/carlo_charlie_92/"><ion-icon name="logo-instagram"></ion-icon></a>
+                <a target="_blank" href="https://www.linkedin.com/in/carlo-capuozzo-08/"><ion-icon name="logo-linkedin"></ion-icon></a>
+                <a target="_blank" href="https://github.com/Shero08/Pre-corso-epicode"><ion-icon name="logo-github"></ion-icon></a>
+            </div>
+        </footer>
+
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
