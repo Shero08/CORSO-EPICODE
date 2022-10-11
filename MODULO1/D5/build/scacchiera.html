@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modulo 1 D5 - scacchiera</title>
+    <style>
+      .container {
+        margin: 4rem;
+        font-size:0;
+        position: relative;
+      }
+      .container h1{
+        font-size: 2rem;
+        text-align: center;
+      }
+      .container .board{
+        margin: 60px auto 0;
+        width: 576px;
+      }
+      .container .board .row div {
+        width: 70px;
+        height: 70px;
+        border: 1px solid black;
+        display: inline-block;
+        font-size: 1rem;
+        position: relative;
+        background: #ab916f;
+        font-weight: 600;
+      }
+      .container .board .row div:nth-child(2n){
+        background: black;
+      }
+      .container .board .row:nth-child(2n){
+        border-top: none;
+      }
+      .container .board .row:nth-child(2n+1){
+        border-bottom: none;
+      }
+      .container .board .row:nth-child(2n) div:nth-child(2n+1){
+        background: black;
+      }
+      .container .board .row:nth-child(2n) div:nth-child(2n){
+        background: #ab916f;
+      }
+      .container .board .row div span:first-of-type{
+        position: absolute;
+        top: 0;
+        left: calc(50% - 6px);
+        margin: -20px 0 0 0;  
+      }
+      .container .board .row:last-of-type div span:first-of-type{
+        position: absolute;
+        bottom: 0;
+        left: calc(50% - 6px);
+        margin: 0 0 -20px 0;  
+        top: auto;
+      }
+      .container .board .row div:nth-child(1) span:last-of-type{
+        position: absolute;
+        left: 0;
+        top: calc(50% - 9px);
+        margin: 0 0 0 -20px;
+      }
+      .container .board .row div:nth-child(8) span{
+        position: absolute;
+        right: 0;
+        top: calc(50% - 9px);
+        margin: 0 -20px 0 0;
+        left: auto;
+      }
+      .container .board .row:first-of-type div:nth-child(8) span:first-of-type{
+        position: absolute;
+        top: 0;
+        left: calc(50% - 9px);
+        margin: -20px 0 0 0;
+      }
+      .container .board .row:first-of-type div:nth-child(8) span:last-of-type{
+        position: absolute;
+        right: 0;
+        top: calc(50% - 9px);
+        margin: 0 -20px 0 0;
+      }
+      .container .board .row div:hover {
+        background: red !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <h1>Chess Board</h1>
+        <div class="board">
+            <div class="row">
+                <div>
+                    <span>A</span>
+                    <span>1</span>
+                </div>
+                <div>
+                    <span>B</span>
+                </div>
+                <div>
+                    <span>C</span>
+                </div>
+                <div>
+                    <span>D</span>
+                </div>
+                <div>
+                    <span>E</span>
+                </div>
+                <div>
+                    <span>F</span>
+                </div>
+                <div>
+                    <span>G</span>
+                </div>
+                <div>
+                    <span>H</span>
+                    <span>1</span>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <span>2</span>
+                </div>
+                <div>
+                </div>
+                <div>
+                </div>
+                <div>
+                </div>
+                <div>
+                </div>
+                <div>
+                </div>
+                <div>
+                </div>
+                <div>
+                    <span>2</span>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <span>3</span>
+                </div>
+                <div>
+                </div>
+                <div>
+                </div>
+                <div>
+                </div>
+                <div>
+                </div>
+                <div>
+                </div>
+                <div>
+                </div>
+                <div>
+                    <span>3</span>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <span>4</span>
+                </div>
+                <div>
+                </div>
+                <div>
+                </div>
+                <div>
+                </div>
+                <div>
+                </div>
+                <div>
+                </div>
+                <div>
+                </div>
+                <div>
+                    <span>4</span>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <span>5</span>
+                </div>
+                <div>
+                </div>
+                <div>
+                </div>
+                <div>
+                </div>
+                <div>
+                </div>
+                <div>
+                </div>
+                <div>
+                </div>
+                <div>
+                    <span>5</span>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <span>6</span>
+                </div>
+                <div>
+                </div>
+                <div>
+                </div>
+                <div>
+                </div>
+                <div>
+                </div>
+                <div>
+                </div>
+                <div>
+                </div>
+                <div>
+                    <span>6</span>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <span>7</span>
+                </div>
+                <div>
+                </div>
+                <div>
+                </div>
+                <div>
+                </div>
+                <div>
+                </div>
+                <div>
+                </div>
+                <div>
+                </div>
+                <div>
+                    <span>7</span>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <span>A</span>
+                    <span>1</span>
+                </div>
+                <div>
+                    <span>B</span>
+                </div>
+                <div>
+                    <span>C</span>
+                </div>
+                <div>
+                    <span>D</span>
+                </div>
+                <div>
+                    <span>E</span>
+                </div>
+                <div>
+                    <span>F</span>
+                </div>
+                <div>
+                    <span>G</span>
+                </div>
+                <div>
+                    <span>H</span>
+                    <span>1</span>
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
