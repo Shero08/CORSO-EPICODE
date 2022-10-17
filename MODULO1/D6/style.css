@@ -1,0 +1,111 @@
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.card{
+    width: 20%;
+    height: auto;
+    margin: 40px auto;
+    position: relative;
+}
+
+.card img{
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+}
+
+.card .card-hover{
+    position: absolute;
+    width: 100%;
+    background: rgba(0,0,0,0.4);
+    height: 100%;
+    top: 0;
+    border-radius: 15px;
+    opacity: 0;
+}
+
+.card .card-hover .save{
+    color: #fff;
+    padding: 15px 20px;
+    background: red;
+    border-radius: 30px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    transform: translateY(-72px);
+    transition: transform 0.25s ease-out;
+    overflow: hidden;
+}
+
+.card .card-hover .link-bottom{
+    width: calc(100% - 40px);
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    padding: 20px;
+    transform: translateY(72px);
+    transition: transform 0.25s ease-out;
+}
+
+.card .card-hover .save:hover{
+    background: #d00101;
+    transition: ease-in-out 300ms all;
+}
+
+.card .card-hover .link-bottom .title-card,
+.card .card-hover .link-bottom .download,
+.card .card-hover .link-bottom .options{
+    background: rgba(255,255,255,0.4);
+    padding: 5px 10px;
+    color: #000;
+    text-decoration: none;
+    border-radius: 30px;
+    width: 62%;
+    margin: 0 4% 0 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-weight: 600;
+}
+
+.card .card-hover .link-bottom .download{
+    width: 10%;
+    margin: 0 4% 0 0;
+    text-align: center;
+}
+
+.card .card-hover .link-bottom .options{
+    width: 10%;
+    margin: 0;
+    text-align: center;
+}
+
+.card .card-hover .link-bottom .title-card:hover,
+.card .card-hover .link-bottom .download:hover,
+.card .card-hover .link-bottom .options:hover{
+    background: rgba(255,255,255,1);
+    transition: ease-in-out 300ms all;
+}
+
+.card .card-hover .link-bottom .title-card i{
+    color: #000;
+    font-size: 1rem;
+}
+
+.card .card-hover:hover{
+    opacity: 1;
+    transition: ease-in-out 300ms all;
+}
+
+.card .card-hover:hover .save,
+.card .card-hover:hover .link-bottom{
+    transform: translateY(0);
+}
