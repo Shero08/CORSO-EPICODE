@@ -1,0 +1,209 @@
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header{
+    width: 100%;
+    text-align: center;
+}
+
+header h1{
+    margin: 20px 0;
+}
+
+header h2{
+    margin: 0 0 20px 0;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #6e6d79;
+}
+
+#related{
+    width: 35%;
+    margin: 0 auto 20px;
+}
+
+#related ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+#related ul li{
+    font-weight: 600;
+    color: #6e6d79;
+}
+
+#related ul li > a{
+    color: #d85888;
+    text-decoration: none;
+    transition: text-decoration ease 600ms;
+}
+
+#related ul li > a:hover{
+    text-decoration: underline;
+}
+
+nav{
+    width: 92%;
+    padding: 10px 4%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    margin: 0 0 30px 0;
+}
+
+.popular > a,
+.filters > a{
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: #fbeef3 1px solid;
+    transition: border ease 300ms;
+    color: black;
+    font-weight: 600;
+    display: block;
+}
+
+.popular > a:hover,
+.filters > a:hover{
+    border: #fbeef3 4px solid;
+}
+
+.category{
+    width: 70%;
+}
+
+.category ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding:0;
+}
+
+.category ul li > a{
+    margin: 0;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    color: #6e6d79;
+    font-weight: 600;
+}
+
+.category ul li > a:hover{
+    background: #f3f3f4;
+    border-radius: 10px;
+    color: #000;
+}
+
+main{
+    width: 96%;
+    padding: 10px 2%;
+    font-size: 0;
+}
+
+main .card{
+    display: inline-block;
+    font-size: 1rem;
+    width: 21%;
+    margin: 0 2% 40px;
+}
+
+main .card .card-img{
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    background: #000;
+}
+
+main .card .card-img img{
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    transition: opacity ease 300ms;
+}
+
+main .card .card-img > img:hover{
+    opacity: 0.8;
+}
+
+main .card .misc{
+    width: 100%;
+    display: flex;
+    margin: 10px 0 0 0;
+}
+
+main .card .misc .profile{
+    width: 60%;
+}
+
+main .card .misc .profile > a{
+    display: flex;
+    justify-content: flex-start;
+    text-decoration: none;
+}
+
+main .card .misc .profile > a .img{
+    width: 30px;
+    margin: 0 5% 0 0;
+}
+
+main .card .misc .profile > a .img img{
+    width: 100%;
+    display: block;
+    border-radius: 50%;
+    object-fit: cover;
+    height: 30px;
+}
+
+main .card .misc .profile > a .name{
+    margin: 0 5% 0 0;
+    line-height: 30px;
+    color: #000;
+    font-weight: 700;
+}
+
+main .card .misc .profile > a:hover .name{
+    text-decoration: underline;
+}
+
+main .card .misc .profile > a .group{
+    margin: 5px 0;
+    background: #ccc;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 800;
+    padding: 0 5px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    line-height: 20px;
+}
+
+main .card .misc .stats{
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    color: #3d3d4d;
+    font-weight: 700;
+}
+
+main .card .misc .stats .like{
+    margin: 0;
+    line-height: 30px;
+}
+
+main .card .misc .stats .like i,
+main .card .misc .stats .views i{
+    color:#9e9ea6;
+}
+
+main .card .misc .stats .views{
+    margin: 0 0 0 5%;
+    line-height: 30px;
+}
