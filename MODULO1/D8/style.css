@@ -1,0 +1,538 @@
+body{
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color:#333333;
+    position: relative;
+}
+
+header{
+    position: sticky;
+    box-shadow: rgba(0,0,0,0.05) 0px 4px 8px;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    background: white;
+}
+
+header nav{
+    display: flex;
+    width: 65%;
+    margin: 0 auto;
+    padding: 0;
+    justify-content: space-between;
+}
+
+header nav .logo{
+    width: 12%;
+    padding: 20px 0;
+}
+
+header nav .logo img{
+    width: 100%;
+    display: block;
+}
+
+header nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+}
+
+header nav ul li{
+    margin: 0;
+    padding: 20px 0;
+}
+
+header nav ul li > a{
+    display: block;
+    margin: 0;
+    text-decoration: none;
+    color: #757575;
+}
+
+header nav ul li > a:hover{
+    color: #000;
+}
+
+header nav ul li.resume{
+    padding: 15px 0;
+}
+
+header nav ul li.resume > a{
+    font-size: 13px;
+    border: #757575 1px solid;
+    border-radius: 15px;
+    line-height: 30px;
+    padding: 0 15px;
+    color: #000;
+    transition: border ease 300ms;
+}
+
+header nav ul li.resume > a:hover{
+    border: #000 1px solid;
+}
+
+header nav ul li.profile{
+    padding: 15px 0;
+}
+
+header nav ul li.profile > a{
+    background: #E25D33;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    color: #fff;
+    line-height: 30px;
+    text-align: center;
+}
+
+main{
+    display: flex;
+    width: 65%;
+    margin: 0 auto;
+}
+
+main > section{
+    border-right: #e6e6e6 2px solid;
+    width: calc(70% - 50px);
+    padding: 40px 50px 0 0;
+}
+
+main > section ul{
+    margin: 0 0 40px 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    border-bottom: #e6e6e6 1px solid;
+}
+
+main > section ul li{
+    color:#757575;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0 15px 0 0;
+    padding: 10px 5px;
+    transition: all ease 300ms;
+    position: relative;
+    bottom: -1px;
+}
+
+main > section ul li:hover{
+    color:#000;
+    border-bottom: #000 1px solid;
+}
+
+main > section ul li.active{
+    color:#000;
+    border-bottom: #000 1px solid;
+}
+
+main > section article{
+    width: 100%;
+    margin: 0 0 40px 0
+}
+
+main > section article .meta{
+    display: flex;
+}
+
+main > section article .meta .author{
+    margin: 0 10px 0 0;
+}
+
+main > section article .meta .author > a{
+    display: block;
+}
+
+main > section article .meta .author > a img{
+    display: block;
+    height: 25px;
+    border-radius: 50%;
+}
+
+main > section article .meta .name-author{
+    line-height: 25px;
+}
+
+main > section article .meta .name-author{
+    line-height: 25px;
+    font-size: 0.9rem;
+    color: #757575;
+}
+
+main > section article .meta .name-author > a{
+    text-decoration: none;
+    font-weight: 600;
+    color: #333;
+    transition: ease 30ms;
+}
+
+main > section article .meta .name-author > a:hover{
+    text-decoration: underline;
+}
+
+main > section article .art-body{
+    display: flex;
+    align-items: center;
+}
+
+main > section article .art-body .m-body{
+    margin: 0 10px 0 0;
+    width: calc(80% - 15px);
+}
+
+main > section article .art-body .m-body h1{
+    margin: 10px 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+main > section article .art-body .m-body p{
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #757575;
+}
+
+main > section article .art-body .m-img{
+    width: 20%;
+}
+
+main > section article .art-body .m-img img{
+    width: 100%;
+    display: block;
+}
+
+main > section article .art-body .meta2{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 0 0;
+    font-size: 0.9rem;
+    color: #757575;
+    align-items: center;
+}
+
+main > section article .art-body .meta2 .meta-in{
+    display: flex;
+    font-size: 0.9rem;
+}
+
+main > section article .art-body .meta2 .meta-in > p{
+    font-size: 0.9rem;
+}
+
+main > section article .art-body .meta2 .meta-in > p a{
+    background: #f2f2f2;
+    text-decoration: none;
+    color: #757575;
+    padding: 5px 10px;
+    border-radius: 15px;
+    transition: all ease 300ms;
+}
+
+main > section article .art-body .meta2 .meta-in > p a:hover{
+    background: #d8d8d8;
+    color: #333;
+}
+
+main > section article .art-body .meta2 .meta-in > span{
+    margin: 0 5px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+main > section article .art-body .meta2 .meta-icon{
+    display: flex;
+}
+
+main > section article .art-body .meta2 .meta-icon a{
+    display: block;
+    margin: 0 5px;
+}
+
+main > section article .art-body .meta2 .meta-icon a img{
+    display: block;
+    height: 25px;
+}
+
+
+main > aside{
+    width: calc(30% - 50px);
+    padding: 40px 0 0 50px;
+}
+
+main > aside .discover{
+    border-bottom: #e6e6e6 1px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main > aside .discover .twitter{
+    display: flex;
+    margin: 0 auto;
+    width: 90px;
+}
+
+main > aside .discover .twitter img{
+    height: 25px;
+    width: auto;
+}
+
+main > aside .discover .twitter img.plus{
+    height: 20px;
+    width: auto;
+    padding:2.5px 0;
+}
+
+main > aside .discover h3{
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 30px 0;
+}
+
+main > aside .discover .connect{
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: #a8a8a8 1px solid;
+    text-decoration: none;
+    color:#333;
+    display: inline-block;
+    transition: border ease 300ms;
+}
+
+main > aside .discover .connect:hover{
+    border: #000 1px solid;
+}
+
+main > aside .discover .connect .connect-in{
+    display: flex;
+    padding: 0;
+}
+
+main > aside .discover .connect img{
+    padding: 0;
+    display: block;
+    height: 30px;
+    margin: 0 10px 0 0;
+}
+
+main > aside .discover .connect span{
+    padding: 0;
+    text-align: center;
+    font-size: 0.9rem;
+    line-height: 30px;
+}
+
+main > aside .discover .later{
+    color: #757575;
+    margin: 30px 0;
+    transition: color ease 300ms;
+}
+
+main > aside .discover .later:hover{
+    color: #000;
+}
+
+main > aside .recommended h1,
+main > aside .follow h1,
+main > aside .saved h1{
+    font-size: 1rem;
+    margin: 40px 0 20px;
+    font-weight: 600;
+}
+
+main > aside .recommended .tags{
+    flex-wrap: wrap;
+    display: flex;
+}
+
+main > aside .recommended .tags > a{
+    padding: 10px 15px;
+    background: #f2f2f2;
+    margin: 0 10px 10px 0;
+    font-size: 0.9rem;
+    color: #333;
+    text-decoration: none;
+    font-weight: 400;
+    border-radius: 20px;
+}
+
+main > aside .recommended .tags > a:hover{
+    background: #d5d5d5;
+    transition: ease-in-out 300ms all;
+}
+
+main > aside .follow .follower-list .follower{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 20px 0;
+}
+
+main > aside .follow .follower-list .follower .desc{
+    display: flex;
+    margin-right: 8px;
+    align-items: center;
+}
+
+main > aside .follow .follower-list .follower .desc .f-img{
+    display: inline-block;
+    margin: 0 15px 0 0;
+}
+
+main > aside .follow .follower-list .follower .desc .f-img img{
+    display: block;
+    border-radius: 50px;
+}
+
+main > aside .follow .follower-list .follower .desc .f-name{
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+}
+
+main > aside .follow .follower-list .follower .desc .f-name h2{
+    margin: 0 0 5px 0;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+main > aside .follow .follower-list .follower .desc .f-name p{
+    margin: 0;
+    padding: 0;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #b4b4b4;
+}
+
+main > aside .follow .follower-list .follower .f-link{
+    display: flex;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: #333;
+    border: rgb(117, 117, 117) 1px solid;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 15px;
+    align-self: center;
+    border-radius: 20px;
+    transition: border ease 300ms;
+}
+
+main > aside .follow .follower-list .follower .f-link:hover{
+    border: #000 1px solid;
+}
+
+main > aside .saved .s-list .s-card{
+    width: 100%;
+    margin: 0 0 20px 0;
+}
+
+main > aside .saved .s-list .s-card .s-meta{
+    display: flex;
+}
+
+main > aside .saved .s-list .s-card .s-meta .author {
+    margin: 0 10px 0 0;
+}
+
+main > aside .saved .s-list .s-card .s-meta .author > a {
+    display: block;
+}
+
+  main > aside .saved .s-list .s-card .s-meta .author > a img {
+    display: block;
+    height: 25px;
+    border-radius: 50%;
+}
+
+main > aside .saved .s-list .s-card .s-meta .name-author {
+    line-height: 25px;
+    font-size: 0.9rem;
+    color: #757575;
+}
+
+main > aside .saved .s-list .s-card .s-meta .name-author > a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #333;
+    transition: ease 30ms;
+}
+
+main > aside .saved .s-list .s-card .s-meta .name-author > a:hover{
+    text-decoration: underline;
+}
+
+main > aside .saved .s-list .s-card .s-title{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 15px 0;
+}
+
+main > aside .saved .s-list .s-card .s-date{
+    display: flex;
+    color: #757575;
+}
+
+main > aside .saved .s-list .s-card .s-date p{
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+main > aside .saved .s-list .s-card .s-date span{
+    margin: 0 10px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+main > aside .saved .s-list .s-card .s-date i{
+    margin: 0 5px;
+}
+
+main > aside .saved .see{
+    margin: 0 0 10px 0;
+    text-decoration: none;
+    color: green;
+    font-size: 1rem;
+}
+
+main > aside .saved .see:hover{
+    text-decoration: underline;
+}
+
+main > aside footer{
+    margin: 50px 0 20px 0;
+    font-size: 1rem;
+}
+
+main > aside footer ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-flow: wrap;
+}
+
+main > aside footer ul li{
+    margin: 0;
+    padding: 10px 10px 0 0;
+}
+
+main > aside footer ul li > a{
+    text-decoration: none;
+    color: #757575;
+    transition: ease 300ms;
+}
+
+main > aside footer ul li > a:hover{
+    text-decoration: underline;
+}
