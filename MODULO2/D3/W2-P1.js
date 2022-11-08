@@ -46,7 +46,7 @@
     let a = 18;
     let b = 4;
 
-    if((a == 8)||(b == 8)||(a - b == 8)||(a + b == 8)){
+    if((a === 8)||(b === 8)||(a - b === 8)||(b - a === 8)||(a + b === 8)){
       console.log(true);
     } else {
       console.log(false);
@@ -64,7 +64,7 @@
     let totalShoppingCart = 60;
     let shipping = 10;
 
-    if(totalShoppingCart >=50){
+    if(totalShoppingCart > 50){
     } else {
       totalShoppingCart = totalShoppingCart + shipping; 
     }
@@ -81,7 +81,7 @@
     let totalShoppingCart = 20;
     let shipping = 10;
 
-    if(totalShoppingCart >=50){
+    if(totalShoppingCart > 50){
     } else {
       totalShoppingCart = totalShoppingCart + shipping; 
     }
@@ -129,8 +129,13 @@
 */
 
 /* 
-    let a = 7;
-    console.log(typeof a);
+    let a = 5;
+
+    if((typeof a) === 'number' && a % 1 === 0){
+        console.log(true);
+    } else {
+        console.log(false);
+    }
 */
 
 /* ESERCIZIO 9
@@ -140,7 +145,7 @@
 /* 
     let a = 256;
 
-    if(a % 2 == 0){
+    if(a % 2 === 0){
       console.log(a + " è un numero pari");
     } else {
       console.log(a + " è un numero dispari");
