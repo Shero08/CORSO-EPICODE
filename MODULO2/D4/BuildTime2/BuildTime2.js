@@ -31,29 +31,29 @@ const amy = {
 
 const prices = [34, 15, 22];
 const shippingCost = 50;
-let sumCart = 0;
+
 
 function totalCart(user){
-    let sconto = 0;
+    let sumCart = 0;
 
     for(let i = 0; i < prices.length; i++){
       sumCart += prices[i];
     }
 
     if(user.isAmbassador === true){
-      sconto = (sumCart / 100) * 30;
+      const sconto = (sumCart / 100) * 30;
       sumCart -= sconto;
     }
 
     if(sumCart <= 100){
       sumCart += shippingCost;
     }
-
-    console.log(user.name);
     return sumCart;
 }
 
-totalCart(marco);
+const totalCartMarco = totalCart(marco);
+const totalCartAmy = totalCart(amy);
+const totalCartPaul = totalCart(paul);
 
-console.log("Totale carrello: " + sumCart);
+console.log("Totale carrello Amy: " + totalCartAmy);
 
