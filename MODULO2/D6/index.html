@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop online</title>
+
+    <style>@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');</style>
+
+    <style>
+        body{
+            background: #efefef;
+            position: relative;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+        }
+
+        table{
+            background: #fff;
+            box-shadow: rgba(0,0,0,0.4) 0px 2px 4px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        table, th, td { border: 1px solid black; border-collapse: collapse; }
+
+        th, td { padding: 10px; }
+
+        h1{ text-align: center; }
+
+        .prod{
+            margin: 0;
+            padding: 0;
+            height: 100px;
+            display: block;
+        }
+
+        .title{ font-weight: 600;}
+
+        .price{ font-weight: 600;}
+
+        .review h3{margin: 0 0 10px 0;}
+
+        .review textarea{margin: 0; width: calc(100% - 10px); padding: 5px;}
+
+        footer{background: #000; padding: 20px 0; text-align: center; margin: 30px 0 0 0; color: #fff;}
+
+        .color{ text-decoration: none; color: green; font-weight: 600;}
+
+        .hide{display: none;}
+    </style>
+
+</head>
+<body>
+    <h1 id="shop" onmouseover="changeText()">My Shop Online</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th colspan="4">Prodotti in vendita</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+
+            <tr>
+                <th>Immagine prodotto</th>
+                <th>Prodotto</th>
+                <th>Prezzo</th>
+                <th>Link Amazon</th>
+            </tr>
+
+            <!-- PRIMO PRODOTTO -->
+            <tr>
+                <td rowspan="2" class="image"><img class="prod" src="https://m.media-amazon.com/images/I/61yHETUsdCL._SL1000_.jpg" alt="prodotto1"></td>
+                <td class="title">XYZprinting Stampante 3D da Vinci Jr. 1.0 Pro</td>
+                <td rowspan="2" class="price">€ 499,00</td>
+                <td rowspan="2" class="link"><a target="_blank" href="https://www.amazon.it/XYZprinting-Stampante-Vinci-Filamento-Aperto/dp/B01N27WS3C/?_encoding=UTF8&pd_rd_w=HkyWE&content-id=amzn1.sym.d7191453-330c-4d28-90bf-29a6cbcb1c7d&pf_rd_p=d7191453-330c-4d28-90bf-29a6cbcb1c7d&pf_rd_r=AESBC4451GEWGGVPWJ0Q&pd_rd_wg=vFj30&pd_rd_r=e800d14f-fce6-41ee-870e-11d667ac1c3f&ref_=pd_gw_ci_mcx_mi">Acquista</a></td>
+            </tr>
+            <tr>
+                <td class="desc">Stampante 3D completamente assemblata. Include 300 g di filamento PLA e strumenti di manutenzione; <br>
+                    Dimensioni di stampa: 15 x 15 x 15 cm, Compatibilità del materiale: PLA / PETG / PLA robusto/ Legno; <br> 
+                    Connettività: cavo USB 2.0, SD card</td>
+            </tr>
+            <tr>
+                <td colspan="4" class="review">
+                    <h3>Scrivi una recensione:</h3>
+                    <textarea name="review" id="recensione"></textarea>
+                </td>
+            </tr>
+
+            <!-- SECONDO PRODOTTO -->
+            <tr>
+                <td rowspan="2" class="image"><img class="prod" src="https://m.media-amazon.com/images/I/61zdQQORNML._AC_SL1500_.jpg" alt="prodotto2"></td>
+                <td class="title">2021 Apple iPad (10,2", Wi-Fi, 64GB) - Grigio siderale (9ª generazione)</td>
+                <td rowspan="2" class="price">€ 359,00</td>
+                <td rowspan="2" class="link"><a target="_blank" href="https://www.amazon.it/2021-Apple-iPad-Wi-Fi-64GB/dp/B09G9JFTKR?ref_=Oct_d_omwf_d_425916031&pd_rd_w=wSqqA&content-id=amzn1.sym.b508b10a-f148-4d76-8507-2befb9d9d990&pf_rd_p=b508b10a-f148-4d76-8507-2befb9d9d990&pf_rd_r=E48DVX5NANTSEM4CWDQK&pd_rd_wg=96UaR&pd_rd_r=09ec0208-d6d7-43ba-9f89-8be49b4bb337&pd_rd_i=B09G9JFTKR">Acquista</a></td>
+            </tr>
+            <tr>
+                <td class="desc">
+                    Splendido display Retina da 10,2" con True Tone, Chip A13 Bionic con Neural Engine, <br> 
+                    Fotocamera posteriore da 8MP con grandangolo, fotocamera frontale da 12MP con ultragrandangolo <br>
+                    e Inquadratura automatica, Fino a 256GB di archiviazione, Altoparlanti stereo Touch ID per <br>
+                    l’autenticazione sicura e Apple Pay, Compatibile con Apple Pencil (1ª generazione) e Smart Keyboard.
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" class="review">
+                    <h3>Scrivi una recensione:</h3>
+                    <textarea name="review" id="recensione"></textarea>
+                </td>
+            </tr>
+
+            <!-- TERZO PRODOTTO -->
+            <tr>
+                <td rowspan="2" class="image"><img class="prod" src="https://m.media-amazon.com/images/I/61ni3t1ryQL._AC_SL1500_.jpg" alt="prodotto3"></td>
+                <td class="title">Logitech MX Master 3S - Mouse Wireless ad Alte Prestazioni - Grigio scuro</td>
+                <td rowspan="2" class="price">€ 96,99</td>
+                <td rowspan="2" class="link"><a target="_blank" href="https://www.amazon.it/Logitech-Master-Prestazioni-Scorrimento-Tracciamento/dp/B07W5JKHFZ?ref_=Oct_d_omwf_d_425916031&pd_rd_w=wSqqA&content-id=amzn1.sym.b508b10a-f148-4d76-8507-2befb9d9d990&pf_rd_p=b508b10a-f148-4d76-8507-2befb9d9d990&pf_rd_r=E48DVX5NANTSEM4CWDQK&pd_rd_wg=96UaR&pd_rd_r=09ec0208-d6d7-43ba-9f89-8be49b4bb337&pd_rd_i=B07W5JKHFZ">Acquista</a></td>
+            </tr>
+            <tr>
+                <td class="desc">Tracciamento su ogni superficie a 8K DPI: usa il mouse per PC senza fili MX Master 3S <br> 
+                                 per lavorare ovunque, con il sensore aggiornato a 8000 DPI e sensibilità personalizzabile <br>
+                                 Riprogettato con click silenziosi: il mouse Bluetooth MX Master 3S introduce Quiet Clicks, <br> 
+                                 Scorrimento Magspeed: mouse per computer silenzioso e ad alta velocità e precisione grazie <br>
+                                 allo scorrimento MagSpeed, Design ergonomico.</td>
+            </tr>
+            <tr>
+                <td colspan="4" class="review">
+                    <h3>Scrivi una recensione:</h3>
+                    <textarea name="review" id="recensione"></textarea>
+                </td>
+            </tr>
+
+            <!-- QUARTO PRODOTTO -->
+            <tr>
+                <td rowspan="2" class="image"><img class="prod" src="https://m.media-amazon.com/images/I/61jhzv9AQRL._AC_SL1200_.jpg" alt="prodotto4"></td>
+                <td class="title">SanDisk 128GB Ultra microSDXC card + SD adapter</td>
+                <td rowspan="2" class="price">€ 20,00</td>
+                <td rowspan="2" class="link"><a target="_blank" href="https://www.amazon.it/XYZprinting-Stampante-Vinci-Filamento-Aperto/dp/B01N27WS3C/?_encoding=UTF8&pd_rd_w=HkyWE&content-id=amzn1.sym.d7191453-330c-4d28-90bf-29a6cbcb1c7d&pf_rd_p=d7191453-330c-4d28-90bf-29a6cbcb1c7d&pf_rd_r=AESBC4451GEWGGVPWJ0Q&pd_rd_wg=vFj30&pd_rd_r=e800d14f-fce6-41ee-870e-11d667ac1c3f&ref_=pd_gw_ci_mcx_mi">Acquista</a></td>
+            </tr>
+            <tr>
+                <td class="desc">Compatibile con dispositivi host che supportano microSDXC e microSDXC UHS-I <br>
+                    Questo prodotto soddisfa gli standard di compatibilità di Google. <br>
+                    Classe 10 per la registrazione e la visualizzazione di video Full HD <br>
+                    Velocità di trasferimento fino a 120 MB/s per spostare fino a 1.000 foto al minuto <br>
+                    Caricamento più rapido delle app con prestazioni di classe A1 </td>
+            </tr>
+            <tr>
+                <td colspan="4" class="review">
+                    <h3>Scrivi una recensione:</h3>
+                    <textarea name="review" id="recensione"></textarea>
+                </td>
+            </tr>
+
+            <!-- QUINTO PRODOTTO -->
+            <tr>
+                <td rowspan="2" class="image"><img class="prod" src="https://m.media-amazon.com/images/I/61b+qg4Q2UL._AC_SL1001_.jpg" alt="prodotto5"></td>
+                <td class="title">BenQ MOBIUZ EX240N Monitor da gaming / 24,5 pollici</td>
+                <td rowspan="2" class="price">€ 180,00</td>
+                <td rowspan="2" class="link"><a target="_blank" href="https://www.amazon.it/dp/B0B797ZPF5?ref_=Oct_DLandingS_D_2a881d9c_NA">Acquista</a></td>
+            </tr>
+            <tr>
+                <td class="desc">BenQ MOBIUZ EX240N Monitor da gaming / 24,5 pollici VA HDR 1ms 165 Hz compatibilità a 144Hz</td>
+            </tr>
+            <tr>
+                <td colspan="4" class="review">
+                    <h3>Scrivi una recensione:</h3>
+                    <textarea name="review" id="recensione"></textarea>
+                </td>
+            </tr>
+
+            <!-- PULSANTI -->
+            <tr>
+                <td colspan="4">
+                    <button onclick="changeBg()">Change bg page</button>
+                    <button onclick="changeAddress()">Change Address</button>
+                    <button onclick="addClass()">Add class link</button>
+                    <button onclick="hideImg()">Hide immages</button>
+                    <button onclick="showImg()">Show immages</button>
+                    <button onclick="changeColorPrice()">Change color prices</button>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <footer>
+        <h1 id="f-shop">My Shop Online</h1>
+        <p id="address">Viale degli Alpini, 34 - 81031 Aversa (CE)</p>
+    </footer>
+
+</body>
+    <script type="text/javascript" src="./script.js"></script>
+</html>
