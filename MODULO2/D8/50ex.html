@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--
+        ESERCIZI HTML
+
+        1) Assegna un titolo per questa pagina [V]
+        2) Crea un tag h1 con il contenuto che preferisci [V]
+        3) Crea una lista ordinata con alcuni elementi al suo interno [V]
+        4) Crea una tabella con 4 righe e 5 colonne [V]
+        5) Aggiungi un'immagine a ogni seconda cella di ogni riga [V]
+        6) Aggiungi un tag <a> ad ogni immagine [V]
+        7) Unisci insieme 2 celle della tabella [V]
+        8) Dividi la pagina inserendo una riga orizzontale [V]
+        9) Crea un elemento contenitore con al suo interno un paragrafo e una lista non ordinata [V]
+        10) Crea un footer contenente alcune informazioni sul creatore della pagina [V]
+
+        ESERCIZI CSS
+
+        11) Assegna una larghezza massima al tag body e centralo nella pagina [V]
+        12) Centra ogni tag h1 [V]
+        13) Cambia il colore di ogni link nella pagina [V]
+        14) Crea una classe e assegnale un bordo [V]
+        15) Fai in modo che i bordi della tabella che hai creato siano arrotondati [V]
+        16) Aggiungi un margine ad ogni paragrafo [V]
+        17) Crea una classe che una volta assegnata cambi la dimensione e il peso del font [V]
+        18) Crea una classe per nascondere un elemento [V]
+        19) Aggiungi un bordo verde a ogni <td> [V]
+        20) Aggiungi un bordo puntato rosso a ogni <tr> (nota: <tr> non accetta una proprietà "border") [V]
+
+        ESERCIZI JAVASCRIPT
+
+        21) Date le variabili x = "John" e y = "Doe", mostra in console "John <> Doe" [V]
+        22) Crea un oggetto con le seguenti proprietà: name, surname, email [V]
+        23) Cancella la proprietà email dall'oggetto appena creato [V]
+        24) Crea un array contenente 10 stringhe [V]
+        25) Mostra in console ogni stringa del precedente array [V]
+        26) Crea un array contenente 100 numeri random [V]
+        27) Scrivi una funzione per trovare il valore massimo e il valore minimo dall'array appena creato [V]
+        28) Crea un array di array, nel quale ogni array "figlio" ha 10 numeri random [V]
+        29) Crea una funzione che riceve 2 array come parametri e ritorni quello con più elementi [V]
+        30) Crea una funzione che riceve 2 array numerici come parametri e ritorna quello con la somma totale degli elementi maggiore [V]
+
+        ESERCIZI SUL DOM
+
+        31) Seleziona l'elemento con id "container" nella pagina [V]
+        32) Seleziona tutti gli elementi di tipo <td> nella pagina [V]
+        33) Usa un ciclo per stampare in console il testo contenuto in ogni elemento <td> nella pagina [V]
+        34) Scrivi una funzione per cambiare il titolo della pagina [V]
+        35) Scrivi una funzione per aggiungere una nuova riga alla tabella nella pagina [V]
+        36) Scrivi una funzione per aggiungere la classe "test" ad ogni riga nella tabella [V]
+        37) Scrivi una funzione per aggiungere uno sfondo rosso ad ogni link presente nella pagina [V]
+        38) Mostra in console "Page loaded" quando la pagina ha finito di caricarsi [V]
+        39) Scrivi una funzione per aggiungere nuovi elementi alla lista non ordinata nella pagina [V]
+        40) Scrivi una funzione per svuotare una lista nella pagina [V]
+
+        ESERCIZI EXTRA
+
+        41) Aggiungi un event listener in modo che compaia un alert quando il cursore passa sopra un link; l'alert deve mostrare la sua proprietà href [V]
+        42) Crea un bottone che una volta cliccato nasconde ogni immagine nella pagina [V]
+        43) Crea un bottone che una volta cliccato nasconde o mostra la tabella nella pagina [V]
+        44) Crea una funzione per calcolare la somma di ogni numero contenuto in tutte le celle della tabella (se il contenuto è un numero) [V]
+        45) Cancella l'ultima lettera dal titolo della pagina ogni volta che l'utente ci clicca sopra
+        46) Aggiungi un event listener in modo che cliccando un <td> nella pagina, questo cambi colore di sfondo [V]
+        47) Aggiungi un bottone che una volta cliccato elimini un <td> a caso nella tabella
+        48) Aggiungi automaticamente un bordo rosa ad una cella della tabella quando il cursore ci passa sopra [V]
+        49) Scrivi una funzione per creare una tabella con 4 righe e 3 colonne e aggiungerla alla fine della pagina [V]
+        50) Scrivi una funzione per rimuovere l'ultima tabella presente nella pagina
+        
+    --><head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Modulo 2 D8 - 50ex</title>
+
+      <style>@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');</style>
+
+      <style>
+        body{ max-width: 50%; margin: 0 auto; font-family: 'Roboto', sans-serif; }
+
+        h1{ text-align: center; }
+
+        a{ color: green; display: block;}
+
+        table{ border-radius: 10px; padding: 5px; border: #000 1px solid; width: 100%; text-align: center;}
+
+        td{ border: green 1px solid; padding: 10px;}
+
+        tr{ outline: red 1px dotted; }
+
+        p{margin: 10px 0;}
+
+        .font-mod{font-weight: 600; font-size: 20px;}
+
+        .hide{display: none;}
+
+        .border{ border: #000 1px solid;}
+
+        footer a{ display: inline; }
+      </style>
+  </head>
+  <body cz-shortcut-listen="true">
+
+    <h1>Questo è il contenuto della pagina</h1>
+
+    <ol>
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+      <li>Elemento 3</li>
+      <li>Elemento 4</li>
+    </ol>
+
+    <table>
+      <tr> 
+        <td>1</td>
+        <td><a href="https://www.google.com"><img src="./assets/img_1.jpg" alt="immagine 1"></a></td>
+        <td>2</td>
+        <td colspan="2">3</td>
+      </tr>
+
+      <tr>
+        <td>4</td>
+        <td><a href="https://www.google.com"><img src="./assets/img_2.jpg" alt="immagine 2"></a></td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+      </tr>
+
+      <tr>
+        <td>8</td>
+        <td><a href="https://www.google.com"><img src="./assets/img_3.jpg" alt="immagine 3"></a></td>
+        <td>9</td>
+        <td>10</td>
+        <td>11</td>
+      </tr>
+
+      <tr>
+        <td>12</td>
+        <td><a href="https://www.google.com"><img src="./assets/img_4.jpg" alt="immagine 4"></a></td>
+        <td>13</td>
+        <td>14</td>
+        <td>15</td>
+      </tr>
+    </table>
+
+    <hr>
+
+    <div id="container">
+      <p>Questo è un paragrafo.</p>
+      <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+      </ul>
+
+      <button onclick="hideImg()">Hide images</button>
+      <button onclick="hideTable()">Hide table</button>
+    </div>
+
+    <footer>
+      <p><a target="_blank" href="https://www.linkedin.com/in/carlo-capuozzo-08/" rel="noopener">Carlo Capuozzo</a>, autore della pagina, nato a Salerno (SA) il 08/11/1992, frequentante il corso Epicode di Web developer</p>
+    </footer>
+
+    <script>
+      //ESERCIZIO 21
+      let x = 'John';
+      let y = 'Doe';
+      console.log(x + ' <> ' + y);
+
+      //ESERCIZIO 22
+      const datiUser = {
+        name: '',
+        surname: '',
+        email: '',
+      }
+
+      //ESERCIZIO 23
+      delete datiUser.email;
+
+      //ESERCIZIO 24
+      const arrayOfString = ['ciao', 'sono', 'una', 'stringa', 'dentro', 'un', 'array', 'di', 'stringhe', '!!'];
+
+      //ESERCIZIO 25
+      for(const el of arrayOfString){
+        console.log(el);
+      }
+
+      //ESERCIZIO 26
+      const getRandom = (min, max) => {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+      }
+
+      function randomArray(num){
+        const arrayNull = [];
+  
+        for(let i = 0; i < num; i++){
+          arrayNull.push(getRandom(0, 200));
+        }
+  
+        return arrayNull;
+      }
+
+      const callArray = randomArray(100);
+      console.log(callArray);
+
+      //ESERCIZIO 27
+      const foundMaxMin = (arrayOfNum) => {
+        let maxValue = 0;
+        let minValue = 0;
+          for(const elem of arrayOfNum) {
+            if(maxValue === 0 || elem > maxValue) {
+              maxValue = elem;
+            } 
+            if(minValue === 0 || elem < minValue) {
+              minValue = elem;
+            }
+          }
+          return `Valore massimo: ${maxValue}, Valore Minimo: ${minValue}`;
+      }
+
+      const maxMin = foundMaxMin(callArray);
+      console.log(maxMin);
+
+      //ESERCIZIO 28
+      const arrayOfArray = (n) => {
+        const emptyArray = [];
+        
+        for(let i = 0; i < n; i++){
+          const emptyArrayInArray = [];
+
+            for(let y = 0; y < n; y++){
+              emptyArrayInArray.push(randomArray(10));
+            }
+
+          emptyArray.push(emptyArrayInArray[i]);
+        }
+        return emptyArray;
+      }
+
+      console.log(arrayOfArray(10));
+
+      //ESERCIZIO 29
+      const confrontArray = (array1, array2) => {
+        if(array1.length > array2.length){
+          console.log('Array con più elementi: ' + array1);
+        } else if(array1.length === array2.length) {
+          console.log('Gli array hanno lo stesso numero di elementi');
+        } else {
+          console.log('Array con più elementi: ' + array2);
+        }
+      }
+
+      const arrayA = [1,2,3,4];
+      const arrayB = ['1','2','3'];
+      confrontArray(arrayA, arrayB);
+
+      //ESERCIZIO 30
+      const confrontArrayTotal = (array1, array2) => {
+        let count1 = 0;
+        let count2 = 0;
+
+        for(let i = 0; i < array1.length; i++){
+          if(typeof array1[i] === 'number'){
+            count1 += array1[i];
+          } else {
+            console.log("Il primo array inserito deve contenere solo numeri");
+            return;
+          }
+        }
+
+        for(let y = 0; y < array2.length; y++){
+          if(typeof array2[y] === 'number'){
+            count2 += array2[y];
+          } else {
+            console.log("Il secondo array inserito deve contenere solo numeri");
+            return;
+          }
+        }
+
+        const maxCount = count1 > count2 ? array1 : array2;
+
+        return maxCount;
+      }
+
+      const arrayUno = [4,5,2,6,8,23];
+      const arrayDue = [4,5,7,6,5,19];
+      console.log(confrontArrayTotal(arrayUno, arrayDue));
+
+      //ESERCIZIO 31
+      const contenitore = document.getElementById('container');
+
+      //ESERCIZIO 32
+      const selectTd = document.querySelectorAll('td');
+
+      //ESERCIZIO 33
+      for(const elem of selectTd){
+        console.log(elem.innerText);
+      }
+
+      //ESERCIZIO 34
+      const changeTitle = (newTitle) => {
+        document.querySelector('h1').innerText = newTitle;
+      }
+
+      //ESERCIZIO 35
+      const addRow = () => {
+        const newRow = document.createElement('tr');
+        const tabella = document.querySelector('table tbody');
+        tabella.appendChild(newRow);
+      }
+
+      //ESERCIZIO 36
+      const addClassRow = () => {
+          const row = document.querySelectorAll('tr');
+
+          for(const elem of row){
+            elem.classList.add('test');
+          }
+      }
+
+      //ESERCIZIO 37
+      const addBackgroundRed = (tag) => {
+          //select tag to apply the background
+          const bg = document.querySelectorAll(tag);
+
+          for(const elem of bg){
+            elem.style.backgroundColor = 'red';
+          }
+      }
+      //addBackgroundRed('a');
+
+      //ESERCIZIO 38
+      window.onload = () => {
+        alert('Page loaded!');
+        showAlertLink();
+        changeBgTd();
+        changeBorderTd();
+      }
+
+      //ESERCIZIO 39
+      const addToTheUlList = (content) => {
+        const newLi = document.createElement('li');
+        newLi.innerHTML = content;
+
+        const ul = document.querySelector('ul');
+        ul.appendChild(newLi);
+      }
+      //addToTheUlList('Nuovo elemento');
+
+      //ESERCIZIO 40
+      const removeElemList = (list) => {
+        const takeList = document.querySelectorAll(list);
+
+        for(const elem of takeList){
+          elem.remove(); // Removes the li of the list
+        }
+      }
+      //removeElemList('ol li');
+
+      //ESERCIZIO 41
+      const showAlertLink = () => {
+        const links = document.querySelectorAll('a');
+
+        for(const el of links){
+          el.addEventListener('mouseover', event => {
+          alert(el.href);
+          });
+        }
+      }
+
+      //ESERCIZIO 42
+      const hideImg = () => {
+        console.log('func.hideImg->onclick');
+        const hide = document.getElementsByTagName('img');
+
+        for (let i = 0; i < hide.length; i++) {
+          hide.item(i).classList.add('hide');
+        }
+      }
+
+      //ESERCIZIO 43
+      const hideTable = () => {
+        console.log('func.hideTable->onclick');
+        const hide = document.getElementsByTagName('table');
+
+        for (let i = 0; i < hide.length; i++) {
+          hide.item(i).classList.add('hide');
+        }
+      }
+
+      //ESERCIZIO 44
+      const sumAllRow = () => {
+        console.log('func.sumAllRow');
+        const rows = document.querySelectorAll('td');
+        let sumOfRow = 0;
+        let convert = [];
+
+        for(let i = 0; i < rows.length; i++){
+
+          convert.push(parseInt(rows[i].innerText)); //convert string in number and add to temp array
+
+          if(!isNaN(convert[i])){ 
+            sumOfRow += convert[i];
+          }
+        }
+        return sumOfRow;
+      }
+
+      //ESERCIZIO 46
+      const changeBgTd = () => {
+        console.log('func.changeBgTd->onclick');
+        const element = document.querySelectorAll('td');
+
+        for(const el of element){
+          el.addEventListener('click', event => {
+            el.style.backgroundColor = 'red';
+          });
+        }
+      }
+
+      //ESERCIZIO 48
+      const changeBorderTd = () => {
+        console.log('func.changeBorderTd->mouseover');
+        const element = document.querySelectorAll('td');
+
+        for(const el of element){
+          el.addEventListener('mouseover', event => {
+            el.style.border = '1px solid pink';
+          });
+        }
+      }
+
+      //ESERCIZIO 49
+      const newTable = () => {
+        console.log('func.newTable');
+        const selectDiv = document.getElementById('container');
+        const createTable = document.createElement('table');
+        createTable.classList.add('border');
+
+        for(let i = 0; i < 4; i++){
+          const createTr = document.createElement('tr');
+          for(let n = 0; n < 3; n++){
+            const createTd = document.createElement('td');
+            createTr.appendChild(createTd);
+            createTd.innerText = n;
+          }
+          createTable.appendChild(createTr);
+        }
+
+        selectDiv.appendChild(createTable);
+      }
+
+    </script>
+  </body>
+</html>

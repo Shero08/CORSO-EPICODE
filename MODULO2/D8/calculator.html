@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator in JS</title>
+    <script src="./js/calculator.js"></script>
+
+    <style>
+        .content {
+            margin-left: 2px;
+        }
+        .tasto {
+            background-color: #a5cff3 ;
+            color: #175c97;
+            font-size: 22pt;
+            border: none;
+            margin: 4px 2px;
+            height: 40px;
+	        width: 46px;
+        }
+        .display {
+            background: none;
+            color: #175c97;
+            font-size: 24pt;
+            border: #175c97 solid 2px;
+            margin: 4px 2px;
+            width: 204px;
+            height: 40px;            
+        }
+        .uguale {
+            width: 208px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Our Calculator</h1>
+    <div>
+        <input id="totalScore" type="text" name="display">
+        <button onclick="add()">Add</button>
+        <button onclick="division()">Division</button>
+        <button onclick="result()">Result</button>
+        <button onclick="mClear()">Clear</button>
+
+        <button id="num1" onclick="readInput(1)">1</button>
+        <button id="num3" onclick="readInput(3)">3</button>
+        <button id="num8" onclick="readInput(8)">8</button>
+    </div>
+
+    <div class="content">
+        <input type="text" name="display" id="operazioni" readonly="readonly" class="display">
+    </div>
+    <div class="content">
+        <div class="content">
+            <input type="submit" id="7" value="7" onclick="n(this.id)" class="tasto">
+            <input type="submit" id="8" value="8" onclick="n(this.id)" class="tasto">
+            <input type="submit" id="9" value="9" onclick="n(this.id)" class="tasto">
+            <input type="submit" id="/" value="/" onclick="n(this.id)" class="tasto">
+        </div>
+        <div class="content">
+            <input type="submit" id="4" value="4" onclick="n(this.id)" class="tasto">
+            <input type="submit" id="5" value="5" onclick="n(this.id)" class="tasto">
+            <input type="submit" id="6" value="6" onclick="n(this.id)" class="tasto">
+            <input type="submit" id="*" value="X" onclick="n(this.id)" class="tasto">
+        </div>
+        <div class="content">
+            <input type="submit" id="1" value="1" onclick="n(this.id)" class="tasto">
+            <input type="submit" id="2" value="2" onclick="n(this.id)" class="tasto">
+            <input type="submit" id="3" value="3" onclick="n(this.id)" class="tasto">
+            <input type="submit" id="-" value="-" onclick="n(this.id)" class="tasto">
+        </div>
+        <div class="content">
+            <input type="submit" value="C" onclick="cancella()" class="tasto">
+            <input type="submit" id="0" value="0" onclick="n(this.id)" class="tasto">
+            <input type="submit" id="." value="." onclick="n(this.id)" class="tasto">
+            <input type="submit" id="+" value="+" onclick="n(this.id)" class="tasto">
+        </div>
+        <div class="content">
+            <button value="=" onclick="operazione()" class="uguale tasto">=</button>
+        </div>
+    </div> 
+</body>
+</html>

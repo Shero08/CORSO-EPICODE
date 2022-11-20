@@ -1,0 +1,117 @@
+body{
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color:#333333;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(../assets/4882066.jpg);
+    background-size: cover;
+}
+
+#container{
+    width: 45%;
+    margin: 0 auto;
+    padding: 0;
+    box-shadow: rgba(0,0,0,0.6) 0px 2px 6px;
+    background: url(../assets/4882066.jpg);
+    background-size: cover;
+    border-radius: 20px;
+}
+
+main{
+    padding: 50px 8%;
+    position: relative;
+    backdrop-filter: blur(12px);  
+    border-radius: 20px;
+    background: rgba(255,255,255,0.15);
+}
+
+main h1{
+    margin: 0 0 20px 0;
+    padding: 0;
+    text-align: center;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: rgba(0,0,0,0.4) 0px 2px 6px;
+    text-transform: uppercase;
+}
+
+#submit{
+    margin: 0;
+    display: flex;
+}
+
+#init,
+#confirm-btn {
+    padding: 15px 8%;
+    font-size: 1.5rem;
+    color: #fff;
+    background: #016ed3;
+    border: #58aeff 4px solid;
+    box-shadow: rgba(0,0,0,0.4) 0px 2px 4px;
+    border-radius: 40px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    transition: ease all 300ms;
+    margin: 0 auto;
+}
+
+#init:hover,
+#confirm-btn:hover {
+    background: #010a2b;
+}
+
+#answers{
+    width: 100%;
+    margin: 10px 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#answers.no-margin {
+    margin: 0;
+}
+
+#answers button {
+    width: 46%;
+    padding: 20px 4%;
+    text-align: center;
+    background: none;
+    border: #58aeff 4px solid;
+    border-radius: 40px;
+    color: #fff;
+    margin: 10px 2%;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: ease all 300ms;
+}
+
+#answers button:hover {
+    background: #016ed3;
+    box-shadow: rgba(0,0,0,0.4) 0px 2px 4px;
+}
+
+#answers button:focus {
+    background: #010a2b;
+    box-shadow: rgba(0,0,0,0.4) 0px 2px 4px;
+}
+
+#counter{
+    color: #ffffff78;
+    font-weight: 800;
+    text-align: right;
+    margin: 20px 0 0 0;
+}
+
+.total-score {
+    text-align: center;
+    font-weight: 800;
+    font-size: 6rem;
+    color: #fff;
+    text-shadow: rgba(0,0,0,0.6) 0px 2px 4px;
+  }
