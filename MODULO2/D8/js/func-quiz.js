@@ -72,7 +72,7 @@ const createConfirm = () => {
     //create confirm button
     const confirmButt = document.getElementById('submit');
     const btnConfirm = document.createElement('button');
-    btnConfirm.innerHTML = 'CONFERMA';
+    btnConfirm.innerHTML = 'CONFIRM';
     btnConfirm.onclick = onConfirm;
     btnConfirm.value = questionNumber;
     btnConfirm.id = 'confirm-btn';
