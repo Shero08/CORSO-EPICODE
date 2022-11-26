@@ -1,0 +1,243 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+header{
+    width: 100%;
+    padding: 20px 0;
+}
+
+nav{
+    width: 40%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: #fef7e2;
+    padding: 20px 0;
+    border-radius: 50px;
+    box-shadow: rgba(0,0,0,0.2) 0px 3px 8px;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    box-sizing: border-box;
+    display: block;
+    padding: 10px 20px;
+    background: #ffdf7e;
+    border-radius: 50px;
+}
+
+.shop a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shop a span{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+nav ul li a img{
+    height: 40px;
+    margin: 0 20px 0 0;
+}
+
+.products{
+    padding: 20px 4%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card{
+    box-sizing: border-box;
+    width: 20%;
+    padding: 20px;
+}
+
+.card .card-container{
+    box-sizing: border-box;
+    background: #fef7e2;
+    border-radius: 80px;
+    box-shadow: rgba(0,0,0,0.2) 0px 3px 8px;
+    padding: 0 0 20px 0;
+}
+
+.product-image{
+    background: url(./assets/honey.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 250px;
+    border-radius: 80px 80px 0 0;
+}
+
+.card img{
+    border-radius: 80px 80px 0 0;
+    width: 100%;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 25px 10px;
+}
+
+.title{
+    width: 70%;
+}
+
+.price{
+    width: 30%;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.title h1{
+    margin: 0 0 5px 0;
+    padding: 0;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.title h2{
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+.btn{
+    text-align: center;
+}
+
+.btn button {
+    background: #ffdf7e;
+    border: none;
+    font-size: 1rem;
+    padding: 10px 40px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.blog{
+    padding: 20px 4%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+article {
+    box-sizing: border-box;
+    width: 50%;
+    padding: 20px;
+}
+
+.container{
+    box-sizing: border-box;
+    background: #fef7e2;
+    border-radius: 10px;
+    box-shadow: rgba(0,0,0,0.2) 0px 3px 8px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.article-image,
+.article-text{
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.article-text{
+    padding: 20px;
+}
+
+.article-text h1{
+    margin: 0 0 20px 0;
+    font-size: 1.5rem;
+}
+
+.article-text p{
+    margin: 0;
+    font-size: 1rem;
+}
+
+.article-image img{
+    width: 100%;
+}
+
+@media (max-width:1600px) {
+    nav{
+        width: 50%;
+    }    
+
+    .card{
+        width: 25%;
+    }
+
+    article {
+        width: 100%;
+    }
+}
+
+@media (max-width:768px) {
+    nav{
+        width: 90%;
+    }    
+
+    .card{
+        width: 100%;
+    }
+
+    article {
+        width: 100%;
+    }
+
+    nav ul {
+        padding: 0 5px;
+    }
+
+    nav ul li a {
+        padding: 10px 5px;
+        font-size: 0.6rem;
+        margin: 0 6px 0;
+    }
+
+    nav ul li a img {
+        height: 30px;
+        margin: 0 10px 0 0;
+    }
+
+    .shop a span {
+        font-size: 1rem;
+    }
+
+    .container {
+        flex-direction: column-reverse;
+        border-radius: 20px;
+    }
+
+    .article-image, .article-text {
+        width: 100%;
+    }
+
+    .article-image img {
+        padding: 20px;
+        box-sizing: border-box;
+    }
+}
