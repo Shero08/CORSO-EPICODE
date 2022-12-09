@@ -1,0 +1,19 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    background:#000;
+}
+
+.bio{
+    margin: 30px auto;
+}
+
+.bio img{
+    width: 60%;
+    border-radius: 10px;
+}
+
+.favorites,
+.other,
+.shame{
+    margin: 0 auto 30px;
+}
