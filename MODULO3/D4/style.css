@@ -1,0 +1,445 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    color: #003649;
+}
+
+.py-6{
+    padding-top: 6.5rem !important;
+    padding-bottom: 6.5rem !important;
+}
+
+.mb-6 {
+    margin-bottom: 4rem !important;
+}
+
+.mb-7 {
+    margin-bottom: 5rem !important;
+}
+
+.navbar{
+    background: #fff;
+    box-shadow: rgba(0,0,0,0.4) 0px 2px 6px;
+}
+
+.navbar img{
+    height: 40px;
+}
+
+.brand-typo{
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #006492;
+    transition: all .2s ease-in-out;
+}
+
+.brand-typo:hover{
+    color: #ffcc00;
+}
+
+.nav-link{
+    color: #006492;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: all .2s ease-in-out;
+}
+
+.nav-link:hover{
+    color: #ffcc00;
+}
+
+.jumbotron{
+    background: url(./assets/travel.jpg);
+    background-size: cover;
+    position: relative;
+    padding: 0;
+    color: #fff;
+}
+
+.overlay{
+    background: #01212d;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: 0.6;
+}
+
+.jumbotron img{
+    width: 50%;
+    filter: drop-shadow(0px 3px 4px rgb(0 0 0 / 0.6));
+}
+
+.jumbotron h1,
+.jumbotron p{
+    text-shadow: rgba(0,0,0,0.6) 0px 2px 6px;
+}
+
+.jumbotron .browse {
+    background: #006492;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 15px 20px;
+    box-shadow: rgba(0,0,0,0.6) 0px 2px 6px;
+    transition: all .2s ease-in-out;
+}
+
+.jumbotron .browse:hover {
+    background: #007bb4;
+    transform: scale(1.1);
+}
+
+.card-offer{
+    width: 100%;
+    height: 350px;
+    max-height: 350px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: .5rem;
+    transition: all .2s ease-in-out;
+    position: relative;
+    box-shadow: rgba(0,0,0,0.6) 0px 2px 6px;
+    background-image: url(./assets/egypt.jpg);
+}
+
+.card-offer:hover{
+    transform: scale(1.1);
+}
+
+.card-offer.o2{
+    background-image: url(./assets/hawaii.jpg);
+}
+
+.card-offer.o3{
+    background-image: url(./assets/winter.jpg);
+}
+
+.card-offer.o4{
+    background-image: url(./assets/san-valentine.jpg);
+}
+
+#offers .overlay{
+    border-radius: .5rem;
+}
+
+.card-offer a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem;
+    display: flex;
+    bottom: 0;
+    margin-top: auto;
+    flex-direction: column;
+    height: 100%;
+    justify-content: end;
+}
+
+#offers .off-tit,
+#day-offer .off-tit,
+#reviews .off-tit,
+#summer .off-tit,
+#last-minute .off-tit{
+    text-transform: uppercase;
+    font-weight: 800;
+    text-align: center;
+}
+
+.off-tit a{
+    color: #003649;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+}
+
+.off-tit a:hover,
+#day-offer .off-tit a:hover,
+#reviews .off-tit a:hover{
+    color: #ffcc00;
+}
+
+#day-offer .off-tit a,
+#reviews .off-tit a{
+    color: #fff;
+    text-shadow: rgba(0,0,0,0.6) 0px 2px 6px;
+    transition: all .2s ease-in-out;
+}
+
+#offers hr,
+#day-offer hr,
+#reviews hr,
+#summer hr,
+#last-minute hr{
+    width: 5%;
+    height: 5px;
+    background: #003649;
+    margin: 5px auto 30px;
+    padding: 0;
+    text-align: center;
+    opacity: 1;
+    border: none;
+}
+
+#day-offer hr,
+#reviews hr{
+    background: #fff;
+    box-shadow: rgba(0,0,0,0.6) 0px 2px 6px;
+}
+
+.card-offer a h1,
+.card-offer a h2{
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-shadow: rgba(0,0,0,0.6) 0px 2px 6px;
+}
+
+.card-offer a span{
+    background: red;
+    position: absolute;
+    top: 0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 800;
+    box-shadow: rgba(0,0,0,0.4) 0px 2px 4px;
+    left: 0;
+    display: none;
+}
+
+.card-offer a h2{
+    font-size: 1rem;
+    color: #fdf6cf;
+    margin: 0 0 5px 0;
+    font-weight: 600;
+}
+
+#summer .card-offer {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: .5rem;
+    transition: all .2s ease-in-out;
+    position: relative;
+    box-shadow: rgba(0,0,0,0.6) 0px 2px 6px;
+    background-image: url(./assets/london.jpg);
+}
+
+#summer .card-offer.o2{
+    background-image: url(./assets/egypt.jpg);
+}
+
+#summer .card-offer.o3{
+    background-image: url(./assets/new-york.jpg);
+}
+
+#summer .card-offer.o4{
+    background-image: url(./assets/dubai.jpg);
+}
+
+#summer .card-offer.o5{
+    background-image: url(./assets/rome.jpg);
+}
+
+#summer .card-offer.o6{
+    background-image: url(./assets/tokyo.jpg);
+}
+
+#summer .overlay,
+#last-minute .overlay{
+    border-radius: .5rem;
+    transition: all .2s ease-in-out;
+}
+
+#summer .card-offer:hover .overlay,
+#last-minute .card-offer:hover .overlay,
+#offers .card-offer:hover .overlay{
+    opacity: 0.2;
+}
+
+#last-minute .card-offer {
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: .5rem;
+    transition: all .2s ease-in-out;
+    position: relative;
+    box-shadow: rgba(0,0,0,0.6) 0px 2px 6px;
+    background-image: url(./assets/grecia.jpg);
+}
+
+#last-minute .card-offer.o2{
+    background-image: url(./assets/paris.jpg);
+}
+
+#last-minute .card-offer.o1{
+    z-index: 30;
+}
+
+#last-minute .card-offer.o3{
+    background-image: url(./assets/ibiza.jpg);
+}
+
+#day-offer,
+#reviews{
+    background: #0064925e;
+}
+
+.day-travel{
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: .5rem;
+    transition: all .2s ease-in-out;
+    position: relative;
+    box-shadow: rgba(0,0,0,0.6) 2px 3px 5px;
+    background-image: url(./assets/london.jpg);
+    border: #fff 6px solid;
+}
+
+#day-offer .title{
+    color: #fff;
+    font-weight: 700;
+    text-shadow: rgba(0,0,0,0.6) 0px 2px 6px;
+}
+
+#day-offer .day-info hr {
+    width: 10%;
+    height: 4px;
+    background: #fff;
+    margin: 10px 0 20px;
+    padding: 0;
+    text-align: left;
+    opacity: 1;
+    border: none;
+    text-shadow: rgba(0,0,0,0.6) 0px 2px 6px;
+}
+
+#day-offer .day-info p {
+    color: #fff;
+    margin: 10px 0;
+    padding: 0;
+    font-weight: 600;
+    text-shadow: rgba(0,0,0,0.6) 0px 2px 6px;
+}
+
+#day-offer .day-info ul{
+    color: #fff;
+    margin: 20px 0 30px;
+    padding: 0;
+    list-style: none;
+}
+
+#day-offer .day-info ul li{
+    color: #fff;
+    margin: 5px 0;
+    padding: 0;
+    font-weight: 600;
+    text-shadow: rgba(0,0,0,0.6) 0px 2px 6px;
+}
+
+#day-offer .day-info a{
+    background: #fff;
+    color: #006492;
+    margin:0;
+    padding: 15px 20px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: rgba(0,0,0,0.6) 0px 2px 6px;
+    transition: all .2s ease-in-out;
+}
+
+#day-offer .day-info a:hover{
+    background: #006492;
+    color: #fff;
+}
+
+#reviews img{
+    filter: drop-shadow(0px 2px 4px rgb(0 0 0 / 0.4));
+}
+
+#reviews .caption{
+    position: absolute;
+    top: 0;
+    padding: 90px 150px;
+    color: #fff;
+    text-align: center;
+}
+
+#reviews .caption h1{
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-shadow: rgba(0,0,0,0.4) 0px 2px 4px;
+}
+
+#reviews .caption h2{
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-shadow: rgba(0,0,0,0.4) 0px 2px 4px;
+}
+
+footer{
+    background: #002739;
+}
+
+footer h1{
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+footer hr{
+    width: 10%;
+    height: 4px;
+    background: #fff;
+    margin: 10px 0 20px;
+    opacity: 1;
+    padding: 0;
+    border: none;
+}
+
+footer ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+footer a{
+    color:#fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer a:hover{
+    color: #fff;
+    text-decoration: underline;
+}
+
+.subfooter{
+    background: #00141d;
+    height: 60px;
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+}
+
+.showHot{
+    display: inherit !important;
+}
+
+@media (max-width:768px){
+    #day-offer{
+        display: none;
+    }
+
+    .col{
+        padding: 0 30px;
+        margin: 0 0 30px 0;
+    }
+}
