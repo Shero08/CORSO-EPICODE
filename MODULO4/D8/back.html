@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulo 4 - D8 BACK-OFFICE</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="bg-dark sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+                <div class="container-fluid text-white">
+                    <a class="navbar-brand" href="#"><i class="fa-solid fa-book-journal-whills"></i> CharlieStore</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="./back.html">Back-Office</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="py-4 text-center container back-tit">
+            <div class="row">
+                <h1 class="fw-bold">Back Office Store</h1>
+            </div>
+        </section>
+
+        <div class="back py-5">
+            <div class="container">
+
+                <div class="row" id="alert"></div>
+
+                <div class="row command">
+                    <div class="col card">
+                        <h1>AGGIUNGI PRODOTTO:</h1>
+                        <form id="addProductForm" class="f-flex">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Inserisci nome:</label>
+                                <input class="form-control" type="text" id="name" name="name">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="description" class="form-label">Inserisci descrizione:</label>
+                                <input class="form-control" type="text" id="description" name="description">
+                            </div>
+                
+                            <div class="mb-3">
+                                <label class="form-label" for="brand">Inserisci Brand:</label>
+                                <input class="form-control" type="text" id="brand" name="brand">
+                            </div>
+                
+                            <div class="mb-3">
+                                <label class="form-label" for="image">Inserisci URL immagine:</label>
+                                <input class="form-control" type="text" id="imageUrl" name="imageUrl">
+                            </div>
+                
+                            <div class="mb-3">
+                                <label class="form-label" for="price">Inserisci prezzo:</label>
+                                <input class="form-control" type="text" id="price" name="price">
+                            </div>
+                
+                            <button class="btn btn-primary" type="submit" id="submitProduct" value="Submit">Inserisci</button>
+                        </form>
+                    </div>
+
+                    <div class="col card">
+                        <h1>MODIFICA PRODOTTO:</h1>
+                        <form id="put-form" class="f-flex">
+                            <div class="mb-3">
+                                <label class="form-label" for="select">Seleziona prodotto</label>
+                                <select class="form-select" title="selectProduct" id="select-p">
+                                    <option value="" selected>Scegli un opzione</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="title" class="form-label">Modifica nome:</label>
+                                <input class="form-control" type="text" id="name-p" name="name">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="description" class="form-label">Modifica descrizione:</label>
+                                <input class="form-control" type="text" id="description-p" name="description">
+                            </div>
+                
+                            <div class="mb-3">
+                                <label class="form-label" for="category">Modifica brand:</label>
+                                <input class="form-control" type="text" id="brand-p" name="brand">
+                            </div>
+                
+                            <div class="mb-3">
+                                <label class="form-label" for="image">Modifica URL immagine:</label>
+                                <input class="form-control" type="text" id="image-p" name="imageUrl">
+                            </div>
+                
+                            <div class="mb-3">
+                                <label class="form-label" for="price">Modifica prezzo:</label>
+                                <input class="form-control" type="text" id="price-p" name="price">
+                            </div>
+                
+                            <button class="btn btn-success" type="submit" id="patchProduct-btn" value="Submit">Modifica</button>
+                        </form>
+                    </div>
+
+                    <div class="col card">
+                        <h1>ELIMINA PRODOTTO:</h1>
+                        <form id="deleteProductForm" class="f-flex">
+                            <div class="mb-3">
+                                <label class="form-label" for="select">Select</label>
+                                <select class="form-select" title="selectProduct" id="del-select">
+                                    <option value="" selected>Scegli un opzione</option>
+                                </select>
+                            </div>
+                
+                            <button class="btn btn-danger" type="submit" id="delProduct-btn" value="Submit">Elimina Prodotto</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="text-muted py-5 bg-dark">
+        <div class="container text-white">
+            <p class="float-end mb-1">
+                <a href="#">Back to top</a>
+            </p>
+            <p class="mb-1">ChalieStore &copy; Design by Carlo Capuozzo</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d53fd3dd7f.js" crossorigin="anonymous"></script>
+    <script src="./js/back.js"></script>
+</body>
+
+</html>
