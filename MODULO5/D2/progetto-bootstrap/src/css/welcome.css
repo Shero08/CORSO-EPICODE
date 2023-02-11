@@ -1,0 +1,10 @@
+.jumbotron{
+    background-image: url(../assets/bookstore2.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.jumbotron h1{
+    text-align: left;
+    text-shadow: rgba(0,0,0,0.6) 0px 2px 6px;
+  }
