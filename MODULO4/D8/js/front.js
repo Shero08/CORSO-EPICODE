@@ -96,7 +96,7 @@ Solitamente
 3. Hai inviato il tipo sbagliato di dati (una stringa invece di un numero o simili).
 */
 
-const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2RhYjg0ODJiMDAxNTAwMTU5YThiNjgiLCJpYXQiOjE2NzUyNzg0MDgsImV4cCI6MTY3NjQ4ODAwOH0.zHhKdPwEWPfkAyPzNF1mmucurKPTcZs7lQqBlhVKoaw';
+const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2RhYjg0ODJiMDAxNTAwMTU5YThiNjgiLCJpYXQiOjE2NzY5MjM3MTksImV4cCI6MTY3ODEzMzMxOX0.UzS4ZMrCmXPLaB5y32U3N2Z7DU397iNrXS1CKR74WL0';
 const api = 'https://striveschool-api.herokuapp.com/api/product/';
 const containerCards = document.getElementById('container-cards');
 const pageProd = './product.html?q='

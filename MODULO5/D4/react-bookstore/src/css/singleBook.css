@@ -1,0 +1,12 @@
+.b-title::after{
+    height: 5px;
+    width: 10%;
+    background: #4000FF;
+    content: '';
+    display: block;
+    margin: 20px 0 0 0;
+}
+
+.price{
+    color: #4000FF;
+}
