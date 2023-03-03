@@ -19,9 +19,10 @@ const CardList = () => {
     <>
     {isProductsLoading && <h1>Caricamento in corso...</h1>}
     <div className='d-flex flex-wrap justify-content-center align-item-center'>
-        {!isProductsLoading && products && products.products.map((product) => {
+        {!isProductsLoading && products && products.products?.map((product, i) => {
             return(
                 <MyCard
+                    key={i}
                     title={product.title}
                     description={product.description}
                 />

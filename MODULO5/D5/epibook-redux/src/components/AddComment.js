@@ -1,41 +1,19 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react'
 
 const AddComment = ({bookID}) => {
     const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2RhYjg0ODJiMDAxNTAwMTU5YThiNjgiLCJpYXQiOjE2NzY5MjM3MTksImV4cCI6MTY3ODEzMzMxOX0.UzS4ZMrCmXPLaB5y32U3N2Z7DU397iNrXS1CKR74WL0';
-    const elementId = bookID
-    const [formData, setFormData] = useState({elementId})
+    const [formData, setFormData] = useState({bookID})
     console.log(formData);
 
-    const postRequest = async () => {
-        try{
-            const data = await fetch(`https://striveschool-api.herokuapp.com/api/comments/`, {
-                method: 'POST',
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${token}`
-                }, 
-                body: JSON.stringify(formData),
-            });
-            console.log(data);
-        }
-        catch(error){
-            console.log(error);
-        }
-    }
-
     const addComment = (e) => {
+        console.log('func.addComment -> start');
         e.preventDefault();
 
-        postRequest();
-
-        setTimeout(() => {
-            window.location.reload();
-        }, 1000)
+        bookID === undefined ? console.log('Errore! seleziona un libro per aggiungere un commento!') : console.log('Aggiungi commento');
     }
 
   return (
-    <div className='py-4 px-3 bg-white rounded-xl shadow-md'>
+    <div className='bg-white rounded-xl shadow shadow-gray-700 px-2 py-2'>
         <form onSubmit={addComment}>
             <h1 className='mb-2'>Aggiungi Commento:</h1>
 

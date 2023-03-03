@@ -1,12 +1,11 @@
 import React from 'react';
+import DeleteComment from './DeleteComment';
 import Rate from './Rate';
 
 const Comment = ({singleComment}) => {
 
-  const commentID = singleComment._id;
-
   return (
-    <div>
+    <div className='relative'>
       <div className='comment'>
         <div className='flex items-center author'>
           <span className="h-8 w-8 overflow-hidden rounded-full bg-white">
@@ -18,7 +17,7 @@ const Comment = ({singleComment}) => {
         </div>
 
         <div>
-          <Rate value={singleComment.rate} />
+          <Rate value={singleComment.rate} /> 
         </div>
 
         <div>
@@ -26,8 +25,8 @@ const Comment = ({singleComment}) => {
         </div>
       </div>
 
-      <div className='comment-btn'>
-        <button>Elimina</button>
+      <div className='comment-btn absolute top-1/2 right-0 transform -translate-y-1/2'>
+        <DeleteComment commentID={singleComment._id} />
       </div>
     </div>
   )
