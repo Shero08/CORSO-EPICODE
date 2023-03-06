@@ -33,7 +33,13 @@ import BookList from './components/BookList';
 import Footer from './components/Footer';
 import Header from './components/Header';
 
+const session = JSON.parse(localStorage.getItem('theme'))
+
 function App() {
+  if (!session) {
+    localStorage.setItem('theme', JSON.stringify('light'))
+  }
+
   return (
     <div className="App">
       <Header />

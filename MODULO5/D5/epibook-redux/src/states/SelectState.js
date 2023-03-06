@@ -16,5 +16,5 @@ const selectSlice = createSlice({
 
 export const selectedState = (state) => state.selectBookStore.selected;
 export const {setSelected} = selectSlice.actions;
-export default selectSlice.reducers;
+export default selectSlice.reducer;
 

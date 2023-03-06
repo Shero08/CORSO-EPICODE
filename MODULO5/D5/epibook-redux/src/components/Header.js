@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setInputState } from '../states/SearchState';
 import { setInput, filterBooks } from '../states/SearchState';
@@ -6,21 +6,20 @@ import { setTheme } from '../states/ThemeState';
 import { changeTheme } from '../states/ThemeState';
 
 const Header = () => {
+  const [actualTheme, setActualTheme] = useState(JSON.parse(localStorage.getItem('theme')))
   const searchInput = useSelector(setInputState);
   const dispatch = useDispatch();
   const themeState = useSelector(changeTheme);
+  console.log(themeState)
 
   const updateThemeState = () => {
-    const updateTheme = themeState === 'light' ? 'dark' : 'light'
-    console.log(typeof updateTheme);
-    dispatch(setTheme(updateTheme));
+    setActualTheme(actualTheme === 'light' ? 'dark' : 'light')
   }
 
   useEffect(() => {
       dispatch(filterBooks())
-  }, [dispatch, searchInput, themeState])
-
-  console.log(typeof themeState);
+      dispatch(setTheme(actualTheme))
+  }, [dispatch, searchInput, actualTheme])
 
   const handleChangeInput = e => {
       e.preventDefault();

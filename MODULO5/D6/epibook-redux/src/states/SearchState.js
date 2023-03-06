@@ -1,8 +1,9 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 
 const initialState = {
     inputValue: '',
     products: [],
+    filteredProducts: [],
     isLoading: false,
     error: null,
 }
@@ -10,14 +11,14 @@ const initialState = {
 export const getProducts = createAsyncThunk(
     'products/getProducts',
     async () => {
-        try{
-            const data = await fetch('https://striveschool-api.herokuapp.com/books')
-            const response = await data.json();
-            console.log(response);
+        try {
+            const data = await fetch(
+                'https://striveschool-api.herokuapp.com/books'
+            )
+            const response = await data.json()
             return response
-        }
-        catch(error){
-            if(error) throw error 
+        } catch (error) {
+            if (error) throw error
         }
     }
 )
@@ -45,17 +46,21 @@ const searchSlice = createSlice({
         },
         filterBooks: (state, action) => {
             const searchTerm = state.inputValue.toLowerCase()
-            const filteredItems = state.products.filter(elem => {
-                return elem.title.toLowerCase().includes(searchTerm.toLowerCase())
+            const filteredItems = state.products.filter((elem) => {
+                return elem.title
+                    .toLowerCase()
+                    .includes(searchTerm.toLowerCase())
             })
-            state.products = filteredItems
-        }
+            state.filteredProducts = filteredItems
+        },
     },
 })
 
 export const productsState = (state) => state.searchStore.products
 export const productsStateLoading = (state) => state.searchStore.isLoading
 export const productsStateError = (state) => state.searchStore.error
-export const setInputState = (state) => state.searchStore.inputValue;
-export const {setInput, filterBooks} = searchSlice.actions; //esporto azioni
-export default searchSlice.reducer;
+export const setInputState = (state) => state.searchStore.inputValue
+export const filteredProductsState = (state) =>
+    state.searchStore.filteredProducts
+export const { setInput, filterBooks } = searchSlice.actions //esporto azioni
+export default searchSlice.reducer

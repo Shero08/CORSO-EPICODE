@@ -1,7 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+const session = JSON.parse(localStorage.getItem('theme'))
+
 const initialState = {
-    theme: localStorage.getItem('theme') || 'light'
+    theme: session
 }
 
 const themeSlice = createSlice({
@@ -11,7 +13,7 @@ const themeSlice = createSlice({
         setTheme: (state, action) => {
             const newTheme = action.payload
             localStorage.setItem('theme', JSON.stringify(newTheme))
-            return newTheme
+            return { ...state, theme: newTheme }
         }
     }
 })

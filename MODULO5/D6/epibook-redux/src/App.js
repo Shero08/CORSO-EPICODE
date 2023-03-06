@@ -1,55 +1,90 @@
 /*
-    ESERCIZIO D5
     Miglioriamo EpiBooks!
 
     Riparti dal progetto precedente, oggi aggiungeremo le seguenti nuove funzionalità.
 
-    Sposta il campo di ricerca in un componente navbar posto in cima, dovrà sempre essere utilizzato per filtrare i libri della lista all’interno di BookList; 
-    per farlo, dovrai elevare lo stato fino ad App.
-    Ecco le istruzioni passo-passo per arrivare al risultato:
-
-    Converti App in un componente classe, e crea al suo interno un oggetto di stato con una proprietà testuale ‘query’.
-    Crea un componente MyNavbar, prendendo ad esempio la navbar di react-bootstrap. Aggiungi al suo interno un campo testuale, e inserisci “Cerca” come placeholder.
-    Renderizza il componente MyNavbar all’interno di App, il più in alto possibile, e forniscigli delle prop per leggere il valore di ‘query’ dallo stato di App e 
-    un metodo in grado di cambiare il valore di ‘query’. Queste due prop saranno collegate all’input testuale di ricerca dentro MyNavbar, rendendolo quindi un campo 
-    di testo controllato.
-    Ora dovresti essere in grado, dal componente MyNavbar, di leggere e scrivere il valore di query nello stato di App. Passa infine il valore di query dallo stato 
-    di App anche al componente BookList, con una prop; in questo modo la lista dei risultati può essere filtrata utilizzando tale valore.
-
-    La prossima nuova funzionalità sarà permettere all’applicazione di avere solo UN libro selezionato all volta; cliccando su una copertina diversa, il libro 
-    precedente deve de-selezionarsi, e il nuovo libro selezionato deve aggiornare la lista dei commenti.
-    Questo richiederà di elevare la proprietà ‘selected’, dallo stato di SingleBook, allo stato di BookList, e il suo valore non sarà più true/false ma conterrà 
-    l’ASIN del libro attualmente selezionato. Per raggiungere questa funzionalità puoi seguire la strategia che hai appena messo in atto per il task precedente.
+    Oggi devi modificare il layout dell’applicazione: crea due colonne, quella di sinistra continuerà a mostrare le copertine del libri, mentre quella sulla 
+    destra mostrerà SEMPRE un componente CommentArea. Infine rimuovi l’altra istanza di CommentArea, quella presente all’interno di SingleBook.
+    Ora, al caricamento dell’applicazione, CommentArea non riceverà più immediatamente un libro per effettuare la fetch delle recensioni; tienine conto e 
+    fai in modo che CommentArea non provochi un crash dell’intera applicazione quando ancora non possiede dati da mostrare.
+    Ora che la proprietà ‘selected’ è memorizzata all’interno del componente BookList, questo valore deve raggiungere anche CommentArea all’interno di una prop: 
+    quando ‘selected’ cambia (ovvero quando l’utente clicca su un nuovo libro) CommentArea deve eseguire una nuova fetch con il nuovo valore di ‘selected’, 
+    e le recensioni nella colonna di destra devono riflettere il libro selezionato nella colonna di sinistra. Puoi ottenere questo risultato inserendo un 
+    componentDidUpdate() all’interno di CommentArea, e impostandolo in ascolto delle modifiche sulla prop ‘selected’.
+    Quanto la sezione delle recensioni è di nuovo funzionante, controlla che anche il componente AddComment non abbia problemi. A seconda della tua 
+    implementazione, potrebbe richiedere una riscrittura in modo da mantenere aggiornata la sua proprietà elementId (necessaria per la richiesta POST) 
+    con il libro attualmente selezionato.
 
     EXTRA
-    Utilizza React.Context per condividere con l’intera applicazione una proprietà ‘theme’: il suo valore può essere light o dark, e deve influenzare qualche 
-    proprietà visiva dei componenti principali (MyNavbar, BookList, SingleBook etc.).
-    Fornisci anche un modo per cambiare valore alla proprietà ‘theme’ (da light a dark e viceversa) e verifica che l’applicazione riceva il nuovo valore alla 
-    modifica dello stesso.
+
+    Se non hai ancora avuto modo di farlo, lavora sull’esperienza utente con indicatori di caricamento e messaggi d’errore.
+
+    📚 API Docs:
+
+    Il tuo endpoint per tutto il CRUD si trova su:
+
+    https://striveschool-api.herokuapp.com/api/comments/
+
+    Ciò significa che puoi effettuare operazioni di GET, DELETE, POST e PUT.
+
+    🛑 IMPORTANT 🛑
+    Per utilizzare l’endpoint avrai bisogno di un header di autenticazione. Puoi ottenerne uno su https://strive.school/studentlogin
+
+    Una recensione è strutturata nel seguente modo:
+
+    {
+    “comment”: string
+    “rate”: string,
+    “elementId”: string
+    }
+
+    Dove:
+
+    comment è il testo della recensione
+    rate è un valore compreso tra 1 e 5
+    elementId è l’identificativo ASIN del libro
+
+    Esempio:
+
+    {
+    “comment”: “Un buon libro, anche se la trama non mi ha convinto fino in fondo”
+    “rate”: “3”,
+    “elementId”: “0316438960”
+    }
+
+    ⚠️ ATTENZIONE ⚠️
+
+    Facendo un’operazione di GET su https://striveschool-api.herokuapp.com/api/comments/ riceverai TUTTE le recensioni presenti nel database. 
+    Probabilmente quello che a te interessa maggiormente sono le recensioni relative ad un singolo libro: puoi ottenerli aggiungendo l’ASIN del libro sul tuo endpoint:
+    https://striveschool-api.herokuapp.com/api/comments/:elementId
+
+    Esempio:
+
+    Una GET su https://striveschool-api.herokuapp.com/api/comments/0316438960 ti restituirà tutte le recensioni appartenenti ad un singolo libro.
+
 */
 
-import './App.css';
-import BookList from './components/BookList';
-import CommentArea from './components/CommentArea';
-import Footer from './components/Footer';
-import Header from './components/Header';
+import './App.css'
+import BookList from './components/BookList'
+import CommentArea from './components/CommentArea'
+import Header from './components/Header'
 
-const session = localStorage.getItem('theme')
+const session = JSON.parse(localStorage.getItem('theme'))
 
 function App() {
-  if(!session){
-    localStorage.setItem('theme', JSON.stringify('light'))
-  }
-  return (
-    <div className="App">
-      <Header />
-      <section className="main flex mx-auto max-w-2xl lg:max-w-full">
-        <BookList />
-        <CommentArea />  
-      </section>
-      <Footer />
-    </div>
-  );
+    if (!session) {
+        localStorage.setItem('theme', JSON.stringify('light'))
+    }
+
+    return (
+        <div className="App">
+            <Header /> 
+            <section className="main flex mx-auto max-w-2xl lg:max-w-full">
+                <BookList />
+                <CommentArea />
+            </section>
+        </div>
+    )
 }
 
-export default App;
+export default App

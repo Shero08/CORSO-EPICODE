@@ -16,8 +16,6 @@ const BookList = () => {
     dispatch(getProducts())
   }, [dispatch, themeState])
 
-  console.log(themeState); 
-
   return (
     <section className={`main flex mx-auto max-w-full ${themeState === 'dark' ? 'bg-gray-600' : 'bg-gray-300'}`}>
       <main className='books mx-auto max-w-2xl lg:max-w-7xl py-8 px-8'>
@@ -29,6 +27,7 @@ const BookList = () => {
                 return(
                     <SingleBook
                         key={book.asin} 
+                        asin={book.asin}
                         title={book.title}
                         image={book.img}
                         category={book.category}
