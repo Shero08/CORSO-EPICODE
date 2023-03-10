@@ -1,0 +1,54 @@
+//testiamo il nostro endpoint
+GET http://localhost:3030/users
+
+#####
+
+GET http://localhost:3030/books
+
+##### //separatore per gli endpoint
+
+POST http://localhost:3030/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "andrea@gmail.com",
+    "password": "andreuccio1",
+    "username": "andrew"
+}
+
+#####
+
+POST http://localhost:3030/books HTTP/1.1
+Content-Type: application/json
+
+{
+    "category": "Fantasy",
+    "img": "https://images-na.ssl-images-amazon.com/images/I/91J28bj3PYL.jpg",
+    "price": 24,
+    "title": "Born of Vengeance",
+    "description": "The League: Nemesis Rising"
+}
+
+#####
+
+DELETE http://localhost:3030/users/640791747c4623b6c7ad8bc2
+
+
+#####
+
+PATCH http://localhost:3030/users/640793d8e672f3d0f214b16a 
+Content-Type: application/json
+
+{
+    "password": "andreuccio2",
+    "username": "andreuccio"
+}
+
+#####
+
+PATCH http://localhost:3030/books/6408cb2d715ea9a3f8295b98
+Content-Type: application/json
+
+{
+    "description": "The League: Nemesis Rising again"
+}
