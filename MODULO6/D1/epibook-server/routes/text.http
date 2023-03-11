@@ -11,9 +11,19 @@ POST http://localhost:3030/users HTTP/1.1
 Content-Type: application/json
 
 {
-    "email": "andrea@gmail.com",
-    "password": "andreuccio1",
-    "username": "andrew"
+    "email": "andreotti@gmail.com",
+    "password": "andreotti2",
+    "username": "newAndy"
+}
+
+#####
+
+POST http://localhost:3030/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "andreotti@gmail.com",
+    "password": "andreotti2"
 }
 
 #####

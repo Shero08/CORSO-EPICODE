@@ -13,6 +13,24 @@ router.get('/books', async (req, res) => {
             error: error
         })
     }
+}) 
+
+router.get('/books/bytitle/:title', async (req, res) => {
+    const { title } = req.params
+    try {
+        const bookByTitle = await Books.find({
+            title: {
+                $regex: title, 
+                $options: 'i'
+            }
+        })
+        res.status(200).send(bookByTitle)
+    } catch (error) {
+        res.status(500).send({
+            message: 'Errore interno del server',
+            error: error
+        })
+    }
 })
 
 router.post('/books', async (req, res) => {

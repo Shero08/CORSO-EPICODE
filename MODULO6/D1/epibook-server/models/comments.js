@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
 
-const CommentsSchema = new mongoose.Schema({
+const CommentsSchema = new mongoose.Schema({  
     bookId: {
-        type: String,
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Book',
         required: true 
     },
     author: {
