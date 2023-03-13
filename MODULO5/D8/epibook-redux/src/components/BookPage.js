@@ -18,7 +18,7 @@ const BookPage = () => {
   const dispatch = useDispatch()
     const themeState = useSelector(changeTheme);
 
-    useEffect(() => {}, [dispatch, themeState])
+    useEffect(() => {}, [dispatch, themeState]) 
     
   return (
     <div>
