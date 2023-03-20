@@ -1,0 +1,23 @@
+
+GET http://localhost:3030/authors
+
+#####
+
+GET http://localhost:3030/authors/640e889d4dbcf5a7174b5fd7
+
+#####
+
+POST http://localhost:3030/authors HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Giancarlo",
+    "surname": "Esposito",
+    "email": "ale.espo@gmail.com",
+    "birth": "01/05/1992",
+    "avatar": "https://ui-avatars.com/api/?name=Giancarlo+Esposito"
+}
+
+#####
+
+DELETE http://localhost:3030/authors/640f03f65148ddf4c194d355

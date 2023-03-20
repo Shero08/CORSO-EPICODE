@@ -8,6 +8,7 @@ const port = 3030;
 const app = express();
 const cors = require('cors');
 const logMiddlewares = require('./middlewares/logMiddlewares')
+require('dotenv').config();
 
 
 //middleware (funzioni che si frappongono fra la request e la response)
@@ -20,7 +21,7 @@ app.use('/', commentsRoute)
 app.use('/', loginRoute)
 
 //connessione al database:
-mongoose.connect('mongodb+srv://carlocap08:rqYWcZKne17SsYkl@m6d1.1yhd9ch.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect(process.env.MONGODB_URL)
 const db = mongoose.connection
 db.on('error', console.error.bind(console, 'Errore di connessione'))
 db.once('open', () => {
