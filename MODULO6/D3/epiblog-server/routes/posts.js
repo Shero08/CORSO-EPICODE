@@ -15,7 +15,7 @@ router.get('/posts', async (req, res) => {
         })
     }
 });
-
+ 
 
 //READ SINGLE POST
 router.get('/posts/:id', async (req, res) => {
@@ -126,6 +126,26 @@ router.patch('/posts/:id', async (req, res) => {
             message: 'Errore interno del server',
             error: error
         })
+    }
+});
+
+//PAGINATION
+router.get('/pagination', async (req, res) => {
+    const { page = 1, limit = 20 } = req.query;
+  
+    try {
+      const posts = await Posts.find()
+        .limit(limit * 1)
+        .skip((page - 1) * limit);
+      const totalDocuments = await Posts.count();
+      const totalPages = Math.ceil(totalDocuments / limit);
+      res.status(200).send({
+        posts,
+        totalPages,
+        currentPage: page,
+      });
+    } catch (error) {
+      console.log(error);
     }
 });
 

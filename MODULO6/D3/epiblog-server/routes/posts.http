@@ -3,6 +3,10 @@ GET http://localhost:3030/posts
 
 #####
 
+GET http://localhost:3030/pagination?page=1&limit=20
+
+#####
+
 GET http://localhost:3030/posts/640e889d4dbcf5a7174b5fd7
 
 #####
