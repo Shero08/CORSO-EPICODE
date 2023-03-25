@@ -6,7 +6,7 @@ const Authors = require('../models/authors');
 //READ ALL
 router.get('/posts', async (req, res) => {
     try {
-        const posts = await Posts.find();
+        const posts = await Posts.find().populate('Authors');
         res.status(200).send(posts);
     } 
     catch (error) {
@@ -16,7 +16,7 @@ router.get('/posts', async (req, res) => {
         })
     }
 });
- 
+  
 
 //READ SINGLE POST
 router.get('/posts/:id', async (req, res) => {
@@ -42,8 +42,8 @@ router.get('/posts/:id', async (req, res) => {
 
 //CREATE NEW
 router.post('/posts', async (req, res) => {
-    const {_id} = req.body
-    const author = await Authors.findById(_id)
+    const { author } = req.body
+    const findAuthor = await Authors.findById(author)
 
     if(!author){
         return res.status(400).send("Autore non trovato")
@@ -53,11 +53,11 @@ router.post('/posts', async (req, res) => {
         category: req.body.category,
         title: req.body.title,
         cover: req.body.cover,
-        readTime:{
+        readTime: {
             value: req.body.readTime.value,
             unit: req.body.readTime.unit
         },
-        author: authors._id,
+        author: findAuthor._id,
         content: req.body.content
     })
     
@@ -75,40 +75,6 @@ router.post('/posts', async (req, res) => {
         })
     }
 })
-
-/*
-//CREATE OLD
-router.post('/posts', async (req, res) => {
-    const posts = new Posts({
-        category: req.body.category,
-        title: req.body.title,
-        cover: req.body.cover,
-        readTime:{
-            value: req.body.readTime.value,
-            unit: req.body.readTime.unit
-        },
-        author:{
-            name: req.body.author.name,
-            avatar: req.body.author.avatar
-        },
-        content: req.body.content
-    })
-    
-    try {
-        const newPost = await posts.save()
-        res.status(200).send({
-            message: 'Post salvato con successo nel database',
-            payload: newPost
-        })
-    } 
-    catch (error) {
-        res.status(500).send({
-            message: 'Errore interno del server',
-            error: error
-        })
-    }
-}) */
-
 
 //DELETE
 router.delete('/posts/:id', async (req, res) => {
