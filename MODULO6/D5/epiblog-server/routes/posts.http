@@ -1,0 +1,79 @@
+
+GET http://localhost:3030/posts
+
+#####
+
+GET http://localhost:3030/pagination?page=1&limit=20
+
+
+##### GET REQUEST OF A SINGLE POST
+
+GET http://localhost:3030/posts/641cc8733033f6962132b415/
+
+
+##### POST REQUEST TO CREATE COMMENT IN SINGLE POST
+
+POST http://localhost:3030/posts/641cc8733033f6962132b415/comments HTTP/1.1
+Content-Type: application/json
+
+{
+  "comment": "Mi sembra abbastanza simpatico",
+  "name": "Arcangelo Rossi",
+  "email": "maildiesempio@gmail.com"
+}
+
+
+##### GET REQUEST OF A SINGLE COMMENT OF A POST
+
+GET http://localhost:3030/posts/641cc8733033f6962132b415/comments/
+
+
+##### PATCH REQUEST TO UPDATE A COMMENT
+
+PATCH http://localhost:3030/posts/641cc8733033f6962132b415/comments/641d92448ca96d18fe51f1c0
+Content-Type: application/json
+
+{
+  "comment": "questo è un commentone modificato",
+  "name": "Gianni Buono",
+  "email": "maildiesempio@gmail.com"
+}
+
+
+##### DELETE REQUEST FOR COMMENTS
+
+DELETE http://localhost:3030/posts/641cc8733033f6962132b415/comments/641d92448ca96d18fe51f1c0
+
+
+##### POST REQUEST TO CREATE A POST
+
+POST http://localhost:3030/posts/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "Post with email 2",
+  "category": "Nuovo Mondo",
+  "cover": "https://picsum.photos/800/400",
+  "readTime":{
+    "value": 5,
+    "unit": "minute"
+  },
+  "author": "640e889d4dbcf5a7174b5fd7",
+  "content": "<div class='py-5 blog-content'><p>with <a href='https://getmimo.com/'>Mimo</a> to launch our next Web Engineering program starting on February 1, 2021.</p><p>Mimo is the most popular code-learning app, helping millions of learners make their first steps with programming.</p><p>Since the first time we talked, we realised we have been in fact working in the very same direction: democratising access to become a software engineer.</p><p>We're now teaming up to help those in their community that have realised they truly love programming and aspire to become professionals - able to work as software engineers and transform a hobby and passion in their profession.</p><p>Democratising access to opportunity - either by making it simple to move the first steps and explore the world of programming as Mimo does, or by helping people go pro as we do at Strive School - is what makes both teams excited.</p><ul><li>Download Mimo for <a href='https://itunes.apple.com/us/app/mimo-learn-how-to-code-through/id1133960732?mt=8&amp;at=1000lpyT'>iOS</a> or <a href='https://play.google.com/store/apps/details?id=com.getmimo'>Android</a> here.</li><li><a href='https://strive.school/'>Apply here</a> to our next Web Engineering cohort.</li></ul></div>"
+}
+
+#####
+
+DELETE http://localhost:3030/posts/640f03f65148ddf4c194d355
+
+#####
+
+PATCH http://localhost:3030/posts/64148ba852d69422218005af
+Content-Type: application/json
+
+{
+  "author": {
+    "avatar": "https://picsum.photos/800/400",
+    "name": "Gennaro Esposito"
+  }
+}
